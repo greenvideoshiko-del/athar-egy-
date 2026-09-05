@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="ATHAR helps businesses build their digital presence.">
+<meta name="description" content="ATHAR helps businesses build a professional digital presence.">
 
 <title>ATHAR | Leave Your Mark</title>
 
 <style>
 
-/* =========================
-   RESET
-========================= */
+/* RESET */
 
 * {
     margin: 0;
@@ -28,14 +26,12 @@ html {
 body {
     font-family: Arial, sans-serif;
     background: #0b0b0b;
-    color: #ffffff;
+    color: white;
     line-height: 1.6;
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 nav {
     position: sticky;
@@ -46,22 +42,21 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 7%;
+    padding: 10px 7%;
 
     background: #0b0b0b;
-
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #252525;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    color: #d4af37;
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: white;
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -80,9 +75,7 @@ nav {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 85vh;
@@ -98,32 +91,20 @@ nav {
     padding: 50px 20px;
 
     background:
-    radial-gradient(circle at top, #24200f 0%, #0b0b0b 55%);
+    radial-gradient(circle at top, #2a2412 0%, #0b0b0b 60%);
 }
 
-.hero-mark {
-    width: 90px;
-    height: 90px;
-
-    border: 2px solid #d4af37;
-
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 45px;
-
-    color: #d4af37;
-
+.hero-logo {
+    width: 220px;
+    max-width: 80%;
     margin-bottom: 25px;
+    object-fit: contain;
 }
 
 .hero h1 {
-    font-size: 55px;
-    max-width: 800px;
-    line-height: 1.15;
+    font-size: 52px;
+    max-width: 850px;
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
@@ -133,30 +114,26 @@ nav {
 
 .hero p {
     max-width: 600px;
-    color: #aaa;
-    margin-bottom: 30px;
+    color: #aaaaaa;
     font-size: 17px;
+    margin-bottom: 30px;
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTON */
 
 .btn {
     display: inline-block;
 
-    padding: 15px 28px;
-
     background: #d4af37;
     color: #111;
 
-    text-decoration: none;
+    padding: 15px 28px;
 
     border: none;
+    border-radius: 5px;
 
-    border-radius: 4px;
-
+    text-decoration: none;
     font-weight: bold;
 
     cursor: pointer;
@@ -170,21 +147,19 @@ nav {
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* SECTIONS */
 
 .section {
-    padding: 85px 8%;
+    padding: 80px 8%;
     text-align: center;
 }
 
 .dark {
-    background: #111;
+    background: #121212;
 }
 
 .section-title {
-    font-size: 35px;
+    font-size: 34px;
     margin-bottom: 15px;
 }
 
@@ -199,16 +174,12 @@ nav {
 }
 
 
-/* =========================
-   SERVICES
-========================= */
+/* CARDS */
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
-
     gap: 25px;
 }
 
@@ -217,11 +188,11 @@ nav {
 
     padding: 35px 25px;
 
-    background: #171717;
+    background: #191919;
 
-    border: 1px solid #292929;
+    border: 1px solid #2d2d2d;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     transition: 0.3s;
 }
@@ -232,7 +203,7 @@ nav {
 }
 
 .icon {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
@@ -242,32 +213,28 @@ nav {
 }
 
 .card p {
-    color: #aaa;
+    color: #aaaaaa;
 }
 
 
-/* =========================
-   WHY ATHAR
-========================= */
+/* WHY ATHAR */
 
 .why-grid {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
-
-    gap: 25px;
+    gap: 30px;
 }
 
 .why-item {
     width: 280px;
-    padding: 25px;
+    padding: 20px;
 }
 
 .why-number {
-    font-size: 40px;
-    color: #d4af37;
+    font-size: 42px;
     font-weight: bold;
+    color: #d4af37;
 }
 
 .why-item h3 {
@@ -279,21 +246,17 @@ nav {
 }
 
 
-/* =========================
-   HOW IT WORKS
-========================= */
+/* STEPS */
 
 .steps {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
-
     gap: 30px;
 }
 
 .step {
-    width: 250px;
+    width: 240px;
 }
 
 .step-number {
@@ -315,38 +278,31 @@ nav {
     font-weight: bold;
 }
 
-.step h3 {
-    margin-bottom: 10px;
-}
-
 .step p {
     color: #999;
+    margin-top: 10px;
 }
 
 
-/* =========================
-   OUR WORK
-========================= */
+/* OUR WORK */
 
 .work-grid {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
-
     gap: 25px;
 }
 
 .work-card {
     width: 300px;
 
-    background: #171717;
+    background: #191919;
 
-    border-radius: 10px;
+    border: 1px solid #2d2d2d;
+
+    border-radius: 12px;
 
     overflow: hidden;
-
-    border: 1px solid #292929;
 
     transition: 0.3s;
 }
@@ -363,9 +319,9 @@ nav {
     justify-content: center;
     align-items: center;
 
-    font-size: 60px;
+    font-size: 65px;
 
-    background: linear-gradient(135deg,#222,#0b0b0b);
+    background: linear-gradient(135deg, #252525, #0d0d0d);
 }
 
 .work-content {
@@ -382,9 +338,7 @@ nav {
 }
 
 
-/* =========================
-   PRICING
-========================= */
+/* PRICING */
 
 .pricing {
     display: flex;
@@ -401,11 +355,11 @@ nav {
 
     padding: 35px 25px;
 
-    background: #171717;
+    background: #191919;
 
-    border: 1px solid #292929;
+    border: 1px solid #2d2d2d;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     position: relative;
 
@@ -424,13 +378,11 @@ nav {
     position: absolute;
 
     top: -14px;
-
     left: 50%;
 
     transform: translateX(-50%);
 
     background: #d4af37;
-
     color: black;
 
     padding: 6px 15px;
@@ -438,7 +390,6 @@ nav {
     border-radius: 20px;
 
     font-size: 12px;
-
     font-weight: bold;
 
     white-space: nowrap;
@@ -463,14 +414,12 @@ nav {
 
 .price-card li {
     padding: 10px 0;
-    border-bottom: 1px solid #292929;
+    border-bottom: 1px solid #2d2d2d;
     color: #aaa;
 }
 
 
-/* =========================
-   FORM
-========================= */
+/* CONTACT FORM */
 
 .contact-form {
     max-width: 550px;
@@ -486,11 +435,11 @@ textarea {
 
     margin-bottom: 15px;
 
-    background: #171717;
-
-    border: 1px solid #333;
+    background: #191919;
 
     color: white;
+
+    border: 1px solid #333;
 
     border-radius: 5px;
 
@@ -510,9 +459,7 @@ textarea:focus {
 }
 
 
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp {
     position: fixed;
@@ -528,30 +475,28 @@ textarea:focus {
     justify-content: center;
     align-items: center;
 
-    border-radius: 50%;
-
     background: #25D366;
 
     color: white;
 
-    font-size: 28px;
+    border-radius: 50%;
 
     text-decoration: none;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,.5);
+    font-size: 28px;
 
-    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+
+    z-index: 2000;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-    padding: 35px 20px;
-
     background: #050505;
+
+    padding: 40px 20px;
 
     text-align: center;
 
@@ -560,19 +505,19 @@ footer {
 
 footer h2 {
     color: #d4af37;
-    letter-spacing: 4px;
+
+    letter-spacing: 5px;
+
     margin-bottom: 10px;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
-@media(max-width:700px) {
+@media (max-width: 700px) {
 
     nav {
-        padding: 15px 20px;
+        padding: 10px 20px;
     }
 
     .nav-links {
@@ -581,6 +526,10 @@ footer h2 {
 
     .hero h1 {
         font-size: 38px;
+    }
+
+    .hero-logo {
+        width: 180px;
     }
 
     .section {
@@ -604,7 +553,6 @@ footer h2 {
 
 </head>
 
-
 <body>
 
 
@@ -613,8 +561,11 @@ footer h2 {
 <nav>
 
 <div class="logo">
-ATH<span>AR</span>
+
+<img src="file_00000000031c8210bc841a03c3660fad.png" alt="ATHAR Logo">
+
 </div>
+
 
 <div class="nav-links">
 
@@ -633,27 +584,37 @@ ATH<span>AR</span>
 </nav>
 
 
-
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-mark">A</div>
+<img
+src="file_00000000031c8210bc841a03c3660fad.png"
+class="hero-logo"
+alt="ATHAR Logo"
+>
+
 
 <h1>
 
 Your Business Deserves To
 
-<span class="gold">Leave A Mark.</span>
+<span class="gold">
+
+Leave A Mark.
+
+</span>
 
 </h1>
 
+
 <p>
 
-ATHAR helps small businesses create a professional digital presence
+ATHAR helps businesses build a professional digital presence
 and connect with more customers.
 
 </p>
+
 
 <a href="#packages" class="btn">
 
@@ -662,7 +623,6 @@ START YOUR JOURNEY
 </a>
 
 </section>
-
 
 
 <!-- SERVICES -->
@@ -738,7 +698,6 @@ to your digital page.
 </section>
 
 
-
 <!-- WHY ATHAR -->
 
 <section class="section" id="why">
@@ -751,7 +710,7 @@ WHY <span>ATHAR?</span>
 
 <p class="section-description">
 
-We make it simple for small businesses to start online.
+We make it simple for businesses to start online.
 
 </p>
 
@@ -767,7 +726,8 @@ We make it simple for small businesses to start online.
 
 <p>
 
-Modern designs that make your business look trustworthy.
+Modern designs that make your business
+look trustworthy and professional.
 
 </p>
 
@@ -798,8 +758,8 @@ We handle everything for you.
 
 <p>
 
-Professional digital solutions at prices suitable
-for small businesses.
+Professional digital solutions at prices
+suitable for growing businesses.
 
 </p>
 
@@ -809,7 +769,6 @@ for small businesses.
 </div>
 
 </section>
-
 
 
 <!-- HOW IT WORKS -->
@@ -882,7 +841,6 @@ Share your page and connect with more customers.
 </section>
 
 
-
 <!-- OUR WORK -->
 
 <section class="section" id="work">
@@ -923,7 +881,6 @@ cafes and food businesses.
 </div>
 
 
-
 <div class="work-card">
 
 <div class="work-image">👗</div>
@@ -942,7 +899,6 @@ and fashion brands.
 </div>
 
 </div>
-
 
 
 <div class="work-card">
@@ -970,7 +926,6 @@ for clinics and medical services.
 </section>
 
 
-
 <!-- PACKAGES -->
 
 <section class="section dark" id="packages">
@@ -990,8 +945,6 @@ Choose the package that fits your business.
 
 <div class="pricing">
 
-
-<!-- STARTER -->
 
 <div class="price-card">
 
@@ -1025,9 +978,6 @@ GET STARTED
 
 </div>
 
-
-
-<!-- BUSINESS -->
 
 <div class="price-card featured">
 
@@ -1070,9 +1020,6 @@ CHOOSE BUSINESS
 </div>
 
 
-
-<!-- PREMIUM -->
-
 <div class="price-card">
 
 <h3>PREMIUM</h3>
@@ -1113,7 +1060,6 @@ GO PREMIUM
 </section>
 
 
-
 <!-- CONTACT -->
 
 <section class="section" id="contact">
@@ -1126,7 +1072,7 @@ START YOUR <span>JOURNEY</span>
 
 <p class="section-description">
 
-Tell us about your business and contact us directly.
+Tell us about your business and we will contact you.
 
 </p>
 
@@ -1178,7 +1124,7 @@ required
 
 
 <textarea
-id="message"
+id="clientMessage"
 placeholder="Tell us about your business"
 ></textarea>
 
@@ -1195,7 +1141,6 @@ SEND REQUEST
 </section>
 
 
-
 <!-- FOOTER -->
 
 <footer>
@@ -1204,10 +1149,11 @@ SEND REQUEST
 
 <p>LEAVE YOUR MARK.</p>
 
+<br>
+
 <p>© 2026 ATHAR. All Rights Reserved.</p>
 
 </footer>
-
 
 
 <!-- WHATSAPP BUTTON -->
@@ -1223,39 +1169,35 @@ target="_blank"
 </a>
 
 
-
 <!-- JAVASCRIPT -->
 
 <script>
 
 document.getElementById("contactForm").addEventListener(
+
 "submit",
+
 function(event) {
 
 event.preventDefault();
 
-
 var name =
 document.getElementById("clientName").value;
-
 
 var business =
 document.getElementById("businessName").value;
 
-
 var phone =
 document.getElementById("phoneNumber").value;
-
 
 var type =
 document.getElementById("businessType").value;
 
+var message =
+document.getElementById("clientMessage").value;
 
-var clientMessage =
-document.getElementById("message").value;
 
-
-/* PUT YOUR WHATSAPP NUMBER HERE */
+/* ضع رقم واتساب هنا */
 
 var whatsappNumber = "201000000000";
 
@@ -1274,7 +1216,7 @@ var whatsappMessage =
 
 "Business Type: " + type + "%0A" +
 
-"Message: " + clientMessage;
+"Message: " + message;
 
 
 var url =
@@ -1296,7 +1238,5 @@ window.open(url, "_blank");
 
 </script>
 
-
 </body>
-
-</html>
+   </html>
