@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="ATHAR helps businesses build their digital presence.">
+
+<title>ATHAR | Leave Your Mark</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: #0b0b0b;
+
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #d4af37;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+    radial-gradient(circle at top, #24200f 0%, #0b0b0b 55%);
+}
+
+.hero-mark {
+    width: 90px;
+    height: 90px;
+
+    border: 2px solid #d4af37;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 45px;
+
+    color: #d4af37;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    max-width: 800px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.gold {
+    color: #d4af37;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background: #d4af37;
+    color: #111;
+
+    text-decoration: none;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.dark {
+    background: #111;
+}
+
+.section-title {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #d4af37;
+}
+
+.section-description {
+    color: #999;
+    max-width: 650px;
+    margin: auto auto 45px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.card {
+    width: 300px;
+
+    padding: 35px 25px;
+
+    background: #171717;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aaa;
+}
+
+
+/* =========================
+   WHY ATHAR
+========================= */
+
+.why-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.why-item {
+    width: 280px;
+    padding: 25px;
+}
+
+.why-number {
+    font-size: 40px;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.why-item h3 {
+    margin: 10px 0;
+}
+
+.why-item p {
+    color: #999;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.step {
+    width: 250px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+    color: black;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #999;
+}
+
+
+/* =========================
+   OUR WORK
+========================= */
+
+.work-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.work-card {
+    width: 300px;
+
+    background: #171717;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #292929;
+
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+}
+
+.work-image {
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 60px;
+
+    background: linear-gradient(135deg,#222,#0b0b0b);
+}
+
+.work-content {
+    padding: 25px;
+}
+
+.work-content h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.work-content p {
+    color: #999;
+}
+
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.price-card {
+    width: 300px;
+
+    padding: 35px 25px;
+
+    background: #171717;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+}
+
+.featured {
+    border: 2px solid #d4af37;
+}
+
+.badge {
+    position: absolute;
+
+    top: -14px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #d4af37;
+
+    color: black;
+
+    padding: 6px 15px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.price-card h3 {
+    color: #d4af37;
+    font-size: 24px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.price-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.price-card li {
+    padding: 10px 0;
+    border-bottom: 1px solid #292929;
+    color: #aaa;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form {
+    max-width: 550px;
+    margin: auto;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    margin-bottom: 15px;
+
+    background: #171717;
+
+    border: 1px solid #333;
+
+    color: white;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    color: white;
+
+    font-size: 28px;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.5);
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 20px;
+
+    background: #050505;
+
+    text-align: center;
+
+    color: #777;
+}
+
+footer h2 {
+    color: #d4af37;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px) {
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .card,
+    .work-card,
+    .price-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+ATH<span>AR</span>
+</div>
+
+<div class="nav-links">
+
+<a href="#services">Services</a>
+
+<a href="#why">Why ATHAR</a>
+
+<a href="#work">Our Work</a>
+
+<a href="#packages">Packages</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-mark">A</div>
+
+<h1>
+
+Your Business Deserves To
+
+<span class="gold">Leave A Mark.</span>
+
+</h1>
+
+<p>
+
+ATHAR helps small businesses create a professional digital presence
+and connect with more customers.
+
+</p>
+
+<a href="#packages" class="btn">
+
+START YOUR JOURNEY
+
+</a>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section class="section dark" id="services">
+
+<h2 class="section-title">
+
+OUR <span>SERVICES</span>
+
+</h2>
+
+<p class="section-description">
+
+Simple and powerful digital solutions for your business.
+
+</p>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">🌐</div>
+
+<h3>BUSINESS WEBSITE</h3>
+
+<p>
+
+A professional website that introduces your business,
+services and contact information.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📱</div>
+
+<h3>WHATSAPP CONNECTION</h3>
+
+<p>
+
+Connect your customers directly to your WhatsApp
+with one simple click.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🔗</div>
+
+<h3>QR CODE</h3>
+
+<p>
+
+A smart QR code that takes customers directly
+to your digital page.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- WHY ATHAR -->
+
+<section class="section" id="why">
+
+<h2 class="section-title">
+
+WHY <span>ATHAR?</span>
+
+</h2>
+
+<p class="section-description">
+
+We make it simple for small businesses to start online.
+
+</p>
+
+
+<div class="why-grid">
+
+
+<div class="why-item">
+
+<div class="why-number">01</div>
+
+<h3>PROFESSIONAL</h3>
+
+<p>
+
+Modern designs that make your business look trustworthy.
+
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-number">02</div>
+
+<h3>SIMPLE</h3>
+
+<p>
+
+No complicated technology.
+We handle everything for you.
+
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-number">03</div>
+
+<h3>AFFORDABLE</h3>
+
+<p>
+
+Professional digital solutions at prices suitable
+for small businesses.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section dark">
+
+<h2 class="section-title">
+
+HOW IT <span>WORKS</span>
+
+</h2>
+
+<p class="section-description">
+
+Start your digital journey in three simple steps.
+
+</p>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">1</div>
+
+<h3>CONTACT US</h3>
+
+<p>
+
+Tell us about your business and what you need.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h3>WE BUILD</h3>
+
+<p>
+
+We create your professional digital presence.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>YOU GROW</h3>
+
+<p>
+
+Share your page and connect with more customers.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- OUR WORK -->
+
+<section class="section" id="work">
+
+<h2 class="section-title">
+
+OUR <span>WORK</span>
+
+</h2>
+
+<p class="section-description">
+
+Examples of businesses ATHAR can help build online.
+
+</p>
+
+
+<div class="work-grid">
+
+
+<div class="work-card">
+
+<div class="work-image">🍽️</div>
+
+<div class="work-content">
+
+<h3>RESTAURANT</h3>
+
+<p>
+
+Modern digital pages for restaurants,
+cafes and food businesses.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="work-card">
+
+<div class="work-image">👗</div>
+
+<div class="work-content">
+
+<h3>FASHION STORE</h3>
+
+<p>
+
+Professional online pages for clothing
+and fashion brands.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="work-card">
+
+<div class="work-image">🏥</div>
+
+<div class="work-content">
+
+<h3>MEDICAL BUSINESS</h3>
+
+<p>
+
+Clean and professional websites
+for clinics and medical services.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- PACKAGES -->
+
+<section class="section dark" id="packages">
+
+<h2 class="section-title">
+
+CHOOSE YOUR <span>PACKAGE</span>
+
+</h2>
+
+<p class="section-description">
+
+Choose the package that fits your business.
+
+</p>
+
+
+<div class="pricing">
+
+
+<!-- STARTER -->
+
+<div class="price-card">
+
+<h3>STARTER</h3>
+
+<div class="price">
+
+300 EGP
+
+</div>
+
+<ul>
+
+<li>Business Information</li>
+
+<li>Contact Details</li>
+
+<li>WhatsApp Button</li>
+
+<li>Mobile Friendly Design</li>
+
+<li>QR Code</li>
+
+</ul>
+
+<a href="#contact" class="btn">
+
+GET STARTED
+
+</a>
+
+</div>
+
+
+
+<!-- BUSINESS -->
+
+<div class="price-card featured">
+
+<div class="badge">
+
+MOST POPULAR
+
+</div>
+
+<h3>BUSINESS</h3>
+
+<div class="price">
+
+500 EGP
+
+</div>
+
+<ul>
+
+<li>Everything in Starter</li>
+
+<li>Professional Design</li>
+
+<li>Services Section</li>
+
+<li>Photo Gallery</li>
+
+<li>Social Media Links</li>
+
+<li>One Free Update</li>
+
+</ul>
+
+<a href="#contact" class="btn">
+
+CHOOSE BUSINESS
+
+</a>
+
+</div>
+
+
+
+<!-- PREMIUM -->
+
+<div class="price-card">
+
+<h3>PREMIUM</h3>
+
+<div class="price">
+
+1000 EGP
+
+</div>
+
+<ul>
+
+<li>Everything in Business</li>
+
+<li>Custom Design</li>
+
+<li>Advanced Sections</li>
+
+<li>Contact Form</li>
+
+<li>One Month Updates</li>
+
+<li>Priority Support</li>
+
+</ul>
+
+<a href="#contact" class="btn">
+
+GO PREMIUM
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<h2 class="section-title">
+
+START YOUR <span>JOURNEY</span>
+
+</h2>
+
+<p class="section-description">
+
+Tell us about your business and contact us directly.
+
+</p>
+
+
+<form class="contact-form" id="contactForm">
+
+
+<input
+type="text"
+id="clientName"
+placeholder="Your Name"
+required
+>
+
+
+<input
+type="text"
+id="businessName"
+placeholder="Business Name"
+required
+>
+
+
+<input
+type="tel"
+id="phoneNumber"
+placeholder="Phone Number"
+required
+>
+
+
+<select id="businessType" required>
+
+<option value="">Select Business Type</option>
+
+<option>Restaurant</option>
+
+<option>Clothing Store</option>
+
+<option>Beauty Salon</option>
+
+<option>Medical</option>
+
+<option>Real Estate</option>
+
+<option>Other</option>
+
+</select>
+
+
+<textarea
+id="message"
+placeholder="Tell us about your business"
+></textarea>
+
+
+<button type="submit" class="btn">
+
+SEND REQUEST
+
+</button>
+
+
+</form>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>ATHAR</h2>
+
+<p>LEAVE YOUR MARK.</p>
+
+<p>© 2026 ATHAR. All Rights Reserved.</p>
+
+</footer>
+
+
+
+<!-- WHATSAPP BUTTON -->
+
+<a
+href="https://wa.me/201000000000"
+class="whatsapp"
+target="_blank"
+>
+
+☎
+
+</a>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+document.getElementById("contactForm").addEventListener(
+"submit",
+function(event) {
+
+event.preventDefault();
+
+
+var name =
+document.getElementById("clientName").value;
+
+
+var business =
+document.getElementById("businessName").value;
+
+
+var phone =
+document.getElementById("phoneNumber").value;
+
+
+var type =
+document.getElementById("businessType").value;
+
+
+var clientMessage =
+document.getElementById("message").value;
+
+
+/* PUT YOUR WHATSAPP NUMBER HERE */
+
+var whatsappNumber = "201000000000";
+
+
+var whatsappMessage =
+
+"Hello ATHAR!%0A%0A" +
+
+"NEW CLIENT REQUEST%0A%0A" +
+
+"Name: " + name + "%0A" +
+
+"Business: " + business + "%0A" +
+
+"Phone: " + phone + "%0A" +
+
+"Business Type: " + type + "%0A" +
+
+"Message: " + clientMessage;
+
+
+var url =
+
+"https://wa.me/" +
+
+whatsappNumber +
+
+"?text=" +
+
+whatsappMessage;
+
+
+window.open(url, "_blank");
+
+}
+
+);
+
+</script>
+
+
+</body>
+
+</html>
