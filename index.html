@@ -5,579 +5,503 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="ATHAR helps businesses build a professional digital presence.">
-
 <title>ATHAR | Leave Your Mark</title>
 
 <style>
 
-/* RESET */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #0b0b0b;
-    color: white;
-    line-height: 1.6;
+body{
+font-family:Arial,sans-serif;
+background:#0b0b0b;
+color:white;
+line-height:1.6;
 }
 
+/* NAVBAR */
 
-/* NAVIGATION */
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 10px 7%;
-
-    background: #0b0b0b;
-    border-bottom: 1px solid #252525;
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 7%;
+background:#0b0b0b;
+border-bottom:1px solid #252525;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+.logo img{
+width:60px;
+height:60px;
+object-fit:contain;
 }
 
-.logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+.nav-links{
+display:flex;
+gap:18px;
+align-items:center;
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:14px;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+.nav-links a:hover{
+color:#d4af37;
 }
 
-.nav-links a:hover {
-    color: #d4af37;
+/* LANGUAGE BUTTON */
+
+.language-btn{
+background:#d4af37;
+color:#111;
+border:none;
+padding:8px 14px;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+font-size:14px;
 }
 
+.language-btn:hover{
+background:white;
+}
 
 /* HERO */
 
-.hero {
-    min-height: 85vh;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 50px 20px;
-
-    background:
-    radial-gradient(circle at top, #2a2412 0%, #0b0b0b 60%);
+.hero{
+min-height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:50px 20px;
+background:radial-gradient(circle at top,#2a2412 0%,#0b0b0b 60%);
 }
 
-.hero-logo {
-    width: 220px;
-    max-width: 80%;
-    margin-bottom: 25px;
-    object-fit: contain;
+.hero-logo{
+width:220px;
+max-width:80%;
+margin-bottom:25px;
 }
 
-.hero h1 {
-    font-size: 52px;
-    max-width: 850px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+.hero h1{
+font-size:52px;
+max-width:850px;
+line-height:1.2;
+margin-bottom:20px;
 }
 
-.gold {
-    color: #d4af37;
+.gold{
+color:#d4af37;
 }
 
-.hero p {
-    max-width: 600px;
-    color: #aaaaaa;
-    font-size: 17px;
-    margin-bottom: 30px;
+.hero p{
+max-width:600px;
+color:#aaa;
+font-size:17px;
+margin-bottom:30px;
 }
-
 
 /* BUTTON */
 
-.btn {
-    display: inline-block;
-
-    background: #d4af37;
-    color: #111;
-
-    padding: 15px 28px;
-
-    border: none;
-    border-radius: 5px;
-
-    text-decoration: none;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
+.btn{
+display:inline-block;
+background:#d4af37;
+color:#111;
+padding:15px 28px;
+border:none;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
 }
 
-.btn:hover {
-    background: white;
-    transform: translateY(-3px);
+.btn:hover{
+background:white;
+transform:translateY(-3px);
 }
-
 
 /* SECTIONS */
 
-.section {
-    padding: 80px 8%;
-    text-align: center;
+.section{
+padding:80px 8%;
+text-align:center;
 }
 
-.dark {
-    background: #121212;
+.dark{
+background:#121212;
 }
 
-.section-title {
-    font-size: 34px;
-    margin-bottom: 15px;
+.section-title{
+font-size:34px;
+margin-bottom:15px;
 }
 
-.section-title span {
-    color: #d4af37;
+.section-title span{
+color:#d4af37;
 }
 
-.section-description {
-    color: #999;
-    max-width: 650px;
-    margin: auto auto 45px;
+.section-description{
+color:#999;
+max-width:650px;
+margin:auto auto 45px;
 }
 
+/* SERVICES */
 
-/* CARDS */
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
 }
 
-.card {
-    width: 300px;
-
-    padding: 35px 25px;
-
-    background: #191919;
-
-    border: 1px solid #2d2d2d;
-
-    border-radius: 12px;
-
-    transition: 0.3s;
+.card{
+width:300px;
+padding:35px 25px;
+background:#191919;
+border:1px solid #2d2d2d;
+border-radius:12px;
+transition:.3s;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #d4af37;
+.card:hover{
+transform:translateY(-8px);
+border-color:#d4af37;
 }
 
-.icon {
-    font-size: 42px;
-    margin-bottom: 15px;
+.icon{
+font-size:42px;
+margin-bottom:15px;
 }
 
-.card h3 {
-    color: #d4af37;
-    margin-bottom: 15px;
+.card h3{
+color:#d4af37;
+margin-bottom:15px;
 }
 
-.card p {
-    color: #aaaaaa;
+.card p{
+color:#aaa;
 }
 
+/* WHY */
 
-/* WHY ATHAR */
-
-.why-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+.why-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
 }
 
-.why-item {
-    width: 280px;
-    padding: 20px;
+.why-item{
+width:280px;
+padding:20px;
 }
 
-.why-number {
-    font-size: 42px;
-    font-weight: bold;
-    color: #d4af37;
+.why-number{
+font-size:42px;
+font-weight:bold;
+color:#d4af37;
 }
 
-.why-item h3 {
-    margin: 10px 0;
+.why-item h3{
+margin:10px 0;
 }
 
-.why-item p {
-    color: #999;
+.why-item p{
+color:#999;
 }
-
 
 /* STEPS */
 
-.steps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+.steps{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
 }
 
-.step {
-    width: 240px;
+.step{
+width:240px;
 }
 
-.step-number {
-    width: 60px;
-    height: 60px;
-
-    margin: 0 auto 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-
-    background: #d4af37;
-    color: black;
-
-    font-size: 22px;
-    font-weight: bold;
+.step-number{
+width:60px;
+height:60px;
+margin:0 auto 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#d4af37;
+color:black;
+font-size:22px;
+font-weight:bold;
 }
 
-.step p {
-    color: #999;
-    margin-top: 10px;
+.step p{
+color:#999;
+margin-top:10px;
 }
 
+/* WORK */
 
-/* OUR WORK */
-
-.work-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+.work-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
 }
 
-.work-card {
-    width: 300px;
-
-    background: #191919;
-
-    border: 1px solid #2d2d2d;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-
-    transition: 0.3s;
+.work-card{
+width:300px;
+background:#191919;
+border:1px solid #2d2d2d;
+border-radius:12px;
+overflow:hidden;
+transition:.3s;
 }
 
-.work-card:hover {
-    transform: translateY(-8px);
-    border-color: #d4af37;
+.work-card:hover{
+transform:translateY(-8px);
+border-color:#d4af37;
 }
 
-.work-image {
-    height: 180px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 65px;
-
-    background: linear-gradient(135deg, #252525, #0d0d0d);
+.work-image{
+height:180px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:65px;
+background:linear-gradient(135deg,#252525,#0d0d0d);
 }
 
-.work-content {
-    padding: 25px;
+.work-content{
+padding:25px;
 }
 
-.work-content h3 {
-    color: #d4af37;
-    margin-bottom: 10px;
+.work-content h3{
+color:#d4af37;
+margin-bottom:10px;
 }
 
-.work-content p {
-    color: #999;
+.work-content p{
+color:#999;
 }
-
 
 /* PRICING */
 
-.pricing {
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 25px;
+.pricing{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:25px;
 }
 
-.price-card {
-    width: 300px;
-
-    padding: 35px 25px;
-
-    background: #191919;
-
-    border: 1px solid #2d2d2d;
-
-    border-radius: 12px;
-
-    position: relative;
-
-    transition: 0.3s;
+.price-card{
+width:300px;
+padding:35px 25px;
+background:#191919;
+border:1px solid #2d2d2d;
+border-radius:12px;
+position:relative;
+transition:.3s;
 }
 
-.price-card:hover {
-    transform: translateY(-8px);
+.price-card:hover{
+transform:translateY(-8px);
 }
 
-.featured {
-    border: 2px solid #d4af37;
+.featured{
+border:2px solid #d4af37;
 }
 
-.badge {
-    position: absolute;
-
-    top: -14px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    background: #d4af37;
-    color: black;
-
-    padding: 6px 15px;
-
-    border-radius: 20px;
-
-    font-size: 12px;
-    font-weight: bold;
-
-    white-space: nowrap;
+.badge{
+position:absolute;
+top:-14px;
+left:50%;
+transform:translateX(-50%);
+background:#d4af37;
+color:black;
+padding:6px 15px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+white-space:nowrap;
 }
 
-.price-card h3 {
-    color: #d4af37;
-    font-size: 24px;
+.price-card h3{
+color:#d4af37;
+font-size:24px;
 }
 
-.price {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 20px 0;
+.price{
+font-size:32px;
+font-weight:bold;
+margin:20px 0;
 }
 
-.price-card ul {
-    list-style: none;
-    text-align: left;
-    margin-bottom: 25px;
+.price-card ul{
+list-style:none;
+text-align:left;
+margin-bottom:25px;
 }
 
-.price-card li {
-    padding: 10px 0;
-    border-bottom: 1px solid #2d2d2d;
-    color: #aaa;
+.price-card li{
+padding:10px 0;
+border-bottom:1px solid #2d2d2d;
+color:#aaa;
 }
 
+/* CONTACT */
 
-/* CONTACT FORM */
-
-.contact-form {
-    max-width: 550px;
-    margin: auto;
+.contact-form{
+max-width:550px;
+margin:auto;
 }
 
-input,
-select,
-textarea {
-    width: 100%;
-
-    padding: 16px;
-
-    margin-bottom: 15px;
-
-    background: #191919;
-
-    color: white;
-
-    border: 1px solid #333;
-
-    border-radius: 5px;
-
-    font-size: 16px;
+input,select,textarea{
+width:100%;
+padding:16px;
+margin-bottom:15px;
+background:#191919;
+color:white;
+border:1px solid #333;
+border-radius:5px;
+font-size:16px;
 }
 
-textarea {
-    height: 120px;
-    resize: vertical;
+textarea{
+height:120px;
+resize:vertical;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #d4af37;
+input:focus,select:focus,textarea:focus{
+outline:none;
+border-color:#d4af37;
 }
-
 
 /* WHATSAPP */
 
-.whatsapp {
-    position: fixed;
-
-    right: 20px;
-    bottom: 20px;
-
-    width: 60px;
-    height: 60px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    background: #25D366;
-
-    color: white;
-
-    border-radius: 50%;
-
-    text-decoration: none;
-
-    font-size: 28px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-
-    z-index: 2000;
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#25D366;
+color:white;
+border-radius:50%;
+text-decoration:none;
+font-size:28px;
+z-index:2000;
 }
-
 
 /* FOOTER */
 
-footer {
-    background: #050505;
-
-    padding: 40px 20px;
-
-    text-align: center;
-
-    color: #777;
+footer{
+background:#050505;
+padding:40px 20px;
+text-align:center;
+color:#777;
 }
 
-footer h2 {
-    color: #d4af37;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 10px;
+footer h2{
+color:#d4af37;
+letter-spacing:5px;
+margin-bottom:10px;
 }
 
+/* ARABIC */
+
+body.rtl{
+direction:rtl;
+font-family:Arial,sans-serif;
+}
+
+body.rtl .price-card ul{
+text-align:right;
+}
 
 /* MOBILE */
 
-@media (max-width: 700px) {
+@media(max-width:700px){
 
-    nav {
-        padding: 10px 20px;
-    }
+nav{
+padding:10px 20px;
+}
 
-    .nav-links {
-        display: none;
-    }
+.nav-links a{
+display:none;
+}
 
-    .hero h1 {
-        font-size: 38px;
-    }
+.hero h1{
+font-size:38px;
+}
 
-    .hero-logo {
-        width: 180px;
-    }
+.hero-logo{
+width:180px;
+}
 
-    .section {
-        padding: 65px 20px;
-    }
+.section{
+padding:65px 20px;
+}
 
-    .section-title {
-        font-size: 29px;
-    }
+.section-title{
+font-size:29px;
+}
 
-    .card,
-    .work-card,
-    .price-card {
-        width: 100%;
-        max-width: 350px;
-    }
+.card,.work-card,.price-card{
+width:100%;
+max-width:350px;
+}
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 
 <nav>
 
 <div class="logo">
-
 <img src="file_00000000031c8210bc841a03c3660fad.png" alt="ATHAR Logo">
-
 </div>
-
 
 <div class="nav-links">
 
-<a href="#services">Services</a>
+<a href="#services" id="navServices">Services</a>
+<a href="#why" id="navWhy">Why ATHAR</a>
+<a href="#work" id="navWork">Our Work</a>
+<a href="#packages" id="navPackages">Packages</a>
+<a href="#contact" id="navContact">Contact</a>
 
-<a href="#why">Why ATHAR</a>
-
-<a href="#work">Our Work</a>
-
-<a href="#packages">Packages</a>
-
-<a href="#contact">Contact</a>
+<button class="language-btn" onclick="toggleLanguage()" id="languageBtn">
+عربي
+</button>
 
 </div>
 
@@ -588,38 +512,22 @@ footer h2 {
 
 <section class="hero">
 
-<img
-src="file_00000000031c8210bc841a03c3660fad.png"
+<img src="file_00000000031c8210bc841a03c3660fad.png"
 class="hero-logo"
-alt="ATHAR Logo"
->
+alt="ATHAR Logo">
 
-
-<h1>
-
+<h1 id="heroTitle">
 Your Business Deserves To
-
-<span class="gold">
-
-Leave A Mark.
-
-</span>
-
+<span class="gold">Leave A Mark.</span>
 </h1>
 
-
-<p>
-
+<p id="heroText">
 ATHAR helps businesses build a professional digital presence
 and connect with more customers.
-
 </p>
 
-
-<a href="#packages" class="btn">
-
+<a href="#packages" class="btn" id="heroBtn">
 START YOUR JOURNEY
-
 </a>
 
 </section>
@@ -629,145 +537,86 @@ START YOUR JOURNEY
 
 <section class="section dark" id="services">
 
-<h2 class="section-title">
-
+<h2 class="section-title" id="servicesTitle">
 OUR <span>SERVICES</span>
-
 </h2>
 
-<p class="section-description">
-
+<p class="section-description" id="servicesDesc">
 Simple and powerful digital solutions for your business.
-
 </p>
-
 
 <div class="cards">
 
-
 <div class="card">
-
 <div class="icon">🌐</div>
-
-<h3>BUSINESS WEBSITE</h3>
-
-<p>
-
+<h3 id="service1Title">BUSINESS WEBSITE</h3>
+<p id="service1Text">
 A professional website that introduces your business,
 services and contact information.
-
 </p>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">📱</div>
-
-<h3>WHATSAPP CONNECTION</h3>
-
-<p>
-
+<h3 id="service2Title">WHATSAPP CONNECTION</h3>
+<p id="service2Text">
 Connect your customers directly to your WhatsApp
 with one simple click.
-
 </p>
-
 </div>
-
 
 <div class="card">
-
 <div class="icon">🔗</div>
-
-<h3>QR CODE</h3>
-
-<p>
-
+<h3 id="service3Title">QR CODE</h3>
+<p id="service3Text">
 A smart QR code that takes customers directly
 to your digital page.
-
 </p>
-
 </div>
 
-
 </div>
-
 </section>
 
 
-<!-- WHY ATHAR -->
+<!-- WHY -->
 
 <section class="section" id="why">
 
-<h2 class="section-title">
-
+<h2 class="section-title" id="whyTitle">
 WHY <span>ATHAR?</span>
-
 </h2>
 
-<p class="section-description">
-
+<p class="section-description" id="whyDesc">
 We make it simple for businesses to start online.
-
 </p>
-
 
 <div class="why-grid">
 
-
 <div class="why-item">
-
 <div class="why-number">01</div>
-
-<h3>PROFESSIONAL</h3>
-
-<p>
-
-Modern designs that make your business
-look trustworthy and professional.
-
+<h3 id="why1Title">PROFESSIONAL</h3>
+<p id="why1Text">
+Modern designs that make your business look trustworthy and professional.
 </p>
-
 </div>
 
-
 <div class="why-item">
-
 <div class="why-number">02</div>
-
-<h3>SIMPLE</h3>
-
-<p>
-
-No complicated technology.
-We handle everything for you.
-
+<h3 id="why2Title">SIMPLE</h3>
+<p id="why2Text">
+No complicated technology. We handle everything for you.
 </p>
-
 </div>
-
 
 <div class="why-item">
-
 <div class="why-number">03</div>
-
-<h3>AFFORDABLE</h3>
-
-<p>
-
-Professional digital solutions at prices
-suitable for growing businesses.
-
+<h3 id="why3Title">AFFORDABLE</h3>
+<p id="why3Text">
+Professional digital solutions at prices suitable for growing businesses.
 </p>
-
 </div>
 
-
 </div>
-
 </section>
 
 
@@ -775,154 +624,77 @@ suitable for growing businesses.
 
 <section class="section dark">
 
-<h2 class="section-title">
-
+<h2 class="section-title" id="stepsTitle">
 HOW IT <span>WORKS</span>
-
 </h2>
 
-<p class="section-description">
-
+<p class="section-description" id="stepsDesc">
 Start your digital journey in three simple steps.
-
 </p>
-
 
 <div class="steps">
 
-
 <div class="step">
-
 <div class="step-number">1</div>
-
-<h3>CONTACT US</h3>
-
-<p>
-
-Tell us about your business and what you need.
-
-</p>
-
+<h3 id="step1Title">CONTACT US</h3>
+<p id="step1Text">Tell us about your business and what you need.</p>
 </div>
 
-
 <div class="step">
-
 <div class="step-number">2</div>
-
-<h3>WE BUILD</h3>
-
-<p>
-
-We create your professional digital presence.
-
-</p>
-
+<h3 id="step2Title">WE BUILD</h3>
+<p id="step2Text">We create your professional digital presence.</p>
 </div>
-
 
 <div class="step">
-
 <div class="step-number">3</div>
-
-<h3>YOU GROW</h3>
-
-<p>
-
-Share your page and connect with more customers.
-
-</p>
-
+<h3 id="step3Title">YOU GROW</h3>
+<p id="step3Text">Share your page and connect with more customers.</p>
 </div>
 
-
 </div>
-
 </section>
 
 
-<!-- OUR WORK -->
+<!-- WORK -->
 
 <section class="section" id="work">
 
-<h2 class="section-title">
-
+<h2 class="section-title" id="workTitle">
 OUR <span>WORK</span>
-
 </h2>
 
-<p class="section-description">
-
+<p class="section-description" id="workDesc">
 Examples of businesses ATHAR can help build online.
-
 </p>
-
 
 <div class="work-grid">
 
-
 <div class="work-card">
-
 <div class="work-image">🍽️</div>
-
 <div class="work-content">
-
-<h3>RESTAURANT</h3>
-
-<p>
-
-Modern digital pages for restaurants,
-cafes and food businesses.
-
-</p>
-
+<h3 id="work1Title">RESTAURANT</h3>
+<p id="work1Text">Modern digital pages for restaurants, cafes and food businesses.</p>
 </div>
-
 </div>
-
 
 <div class="work-card">
-
 <div class="work-image">👗</div>
-
 <div class="work-content">
-
-<h3>FASHION STORE</h3>
-
-<p>
-
-Professional online pages for clothing
-and fashion brands.
-
-</p>
-
+<h3 id="work2Title">FASHION STORE</h3>
+<p id="work2Text">Professional online pages for clothing and fashion brands.</p>
 </div>
-
 </div>
-
 
 <div class="work-card">
-
 <div class="work-image">🏥</div>
-
 <div class="work-content">
-
-<h3>MEDICAL BUSINESS</h3>
-
-<p>
-
-Clean and professional websites
-for clinics and medical services.
-
-</p>
-
+<h3 id="work3Title">MEDICAL BUSINESS</h3>
+<p id="work3Text">Clean and professional websites for clinics and medical services.</p>
+</div>
 </div>
 
 </div>
-
-
-</div>
-
 </section>
 
 
@@ -930,133 +702,77 @@ for clinics and medical services.
 
 <section class="section dark" id="packages">
 
-<h2 class="section-title">
-
+<h2 class="section-title" id="packagesTitle">
 CHOOSE YOUR <span>PACKAGE</span>
-
 </h2>
 
-<p class="section-description">
-
+<p class="section-description" id="packagesDesc">
 Choose the package that fits your business.
-
 </p>
-
 
 <div class="pricing">
 
-
 <div class="price-card">
 
-<h3>STARTER</h3>
+<h3 id="starterTitle">STARTER</h3>
 
-<div class="price">
-
-300 EGP
-
-</div>
+<div class="price">300 EGP</div>
 
 <ul>
-
-<li>Business Information</li>
-
-<li>Contact Details</li>
-
-<li>WhatsApp Button</li>
-
-<li>Mobile Friendly Design</li>
-
-<li>QR Code</li>
-
+<li id="starter1">Business Information</li>
+<li id="starter2">Contact Details</li>
+<li id="starter3">WhatsApp Button</li>
+<li id="starter4">Mobile Friendly Design</li>
+<li id="starter5">QR Code</li>
 </ul>
 
-<a href="#contact" class="btn">
-
-GET STARTED
-
-</a>
+<a href="#contact" class="btn" id="starterBtn">GET STARTED</a>
 
 </div>
 
 
 <div class="price-card featured">
 
-<div class="badge">
+<div class="badge" id="popularBadge">MOST POPULAR</div>
 
-MOST POPULAR
+<h3 id="businessTitle">BUSINESS</h3>
 
-</div>
-
-<h3>BUSINESS</h3>
-
-<div class="price">
-
-500 EGP
-
-</div>
+<div class="price">500 EGP</div>
 
 <ul>
-
-<li>Everything in Starter</li>
-
-<li>Professional Design</li>
-
-<li>Services Section</li>
-
-<li>Photo Gallery</li>
-
-<li>Social Media Links</li>
-
-<li>One Free Update</li>
-
+<li id="business1">Everything in Starter</li>
+<li id="business2">Professional Design</li>
+<li id="business3">Services Section</li>
+<li id="business4">Photo Gallery</li>
+<li id="business5">Social Media Links</li>
+<li id="business6">One Free Update</li>
 </ul>
 
-<a href="#contact" class="btn">
-
-CHOOSE BUSINESS
-
-</a>
+<a href="#contact" class="btn" id="businessBtn">CHOOSE BUSINESS</a>
 
 </div>
 
 
 <div class="price-card">
 
-<h3>PREMIUM</h3>
+<h3 id="premiumTitle">PREMIUM</h3>
 
-<div class="price">
-
-1000 EGP
-
-</div>
+<div class="price">1000 EGP</div>
 
 <ul>
-
-<li>Everything in Business</li>
-
-<li>Custom Design</li>
-
-<li>Advanced Sections</li>
-
-<li>Contact Form</li>
-
-<li>One Month Updates</li>
-
-<li>Priority Support</li>
-
+<li id="premium1">Everything in Business</li>
+<li id="premium2">Custom Design</li>
+<li id="premium3">Advanced Sections</li>
+<li id="premium4">Contact Form</li>
+<li id="premium5">One Month Updates</li>
+<li id="premium6">Priority Support</li>
 </ul>
 
-<a href="#contact" class="btn">
-
-GO PREMIUM
-
-</a>
+<a href="#contact" class="btn" id="premiumBtn">GO PREMIUM</a>
 
 </div>
 
-
 </div>
-
 </section>
 
 
@@ -1064,77 +780,37 @@ GO PREMIUM
 
 <section class="section" id="contact">
 
-<h2 class="section-title">
-
+<h2 class="section-title" id="contactTitle">
 START YOUR <span>JOURNEY</span>
-
 </h2>
 
-<p class="section-description">
-
+<p class="section-description" id="contactDesc">
 Tell us about your business and we will contact you.
-
 </p>
-
 
 <form class="contact-form" id="contactForm">
 
+<input type="text" id="clientName" placeholder="Your Name" required>
 
-<input
-type="text"
-id="clientName"
-placeholder="Your Name"
-required
->
+<input type="text" id="businessName" placeholder="Business Name" required>
 
-
-<input
-type="text"
-id="businessName"
-placeholder="Business Name"
-required
->
-
-
-<input
-type="tel"
-id="phoneNumber"
-placeholder="Phone Number"
-required
->
-
+<input type="tel" id="phoneNumber" placeholder="Phone Number" required>
 
 <select id="businessType" required>
-
-<option value="">Select Business Type</option>
-
-<option>Restaurant</option>
-
-<option>Clothing Store</option>
-
-<option>Beauty Salon</option>
-
-<option>Medical</option>
-
-<option>Real Estate</option>
-
-<option>Other</option>
-
+<option value="" id="typeDefault">Select Business Type</option>
+<option id="type1">Restaurant</option>
+<option id="type2">Clothing Store</option>
+<option id="type3">Beauty Salon</option>
+<option id="type4">Medical</option>
+<option id="type5">Real Estate</option>
+<option id="type6">Other</option>
 </select>
 
+<textarea id="clientMessage" placeholder="Tell us about your business"></textarea>
 
-<textarea
-id="clientMessage"
-placeholder="Tell us about your business"
-></textarea>
-
-
-<button type="submit" class="btn">
-
+<button type="submit" class="btn" id="sendBtn">
 SEND REQUEST
-
 </button>
-
 
 </form>
 
@@ -1147,7 +823,7 @@ SEND REQUEST
 
 <h2>ATHAR</h2>
 
-<p>LEAVE YOUR MARK.</p>
+<p id="footerText">LEAVE YOUR MARK.</p>
 
 <br>
 
@@ -1156,81 +832,215 @@ SEND REQUEST
 </footer>
 
 
-<!-- WHATSAPP BUTTON -->
+<!-- WHATSAPP -->
 
-<a
-href="https://wa.me/201289122717"
+<a href="https://wa.me/201000000000"
 class="whatsapp"
-target="_blank"
->
+target="_blank">
 
 ☎
 
 </a>
 
 
-<!-- JAVASCRIPT -->
-
 <script>
 
+let arabic=false;
+
+function toggleLanguage(){
+
+arabic=!arabic;
+
+if(arabic){
+
+document.body.classList.add("rtl");
+
+document.documentElement.lang="ar";
+
+document.getElementById("languageBtn").innerText="EN";
+
+document.getElementById("navServices").innerText="الخدمات";
+document.getElementById("navWhy").innerText="لماذا أثر";
+document.getElementById("navWork").innerText="أعمالنا";
+document.getElementById("navPackages").innerText="الباقات";
+document.getElementById("navContact").innerText="تواصل معنا";
+
+document.getElementById("heroTitle").innerHTML=
+"مشروعك يستحق أن <span class='gold'>يترك أثرًا.</span>";
+
+document.getElementById("heroText").innerText=
+"أثر يساعد أصحاب المشاريع على بناء حضور رقمي احترافي والوصول إلى المزيد من العملاء.";
+
+document.getElementById("heroBtn").innerText="ابدأ رحلتك";
+
+document.getElementById("servicesTitle").innerHTML=
+"خدماتنا <span>الرقمية</span>";
+
+document.getElementById("servicesDesc").innerText=
+"حلول رقمية بسيطة وفعالة لمساعدة مشروعك على النمو.";
+
+document.getElementById("service1Title").innerText="موقع لمشروعك";
+document.getElementById("service1Text").innerText="موقع احترافي يعرض مشروعك وخدماتك وطرق التواصل معك.";
+
+document.getElementById("service2Title").innerText="ربط واتساب";
+document.getElementById("service2Text").innerText="اجعل عملاءك يتواصلون معك مباشرة عبر واتساب بضغطة واحدة.";
+
+document.getElementById("service3Title").innerText="رمز QR";
+document.getElementById("service3Text").innerText="رمز ذكي يأخذ عملاءك مباشرة إلى صفحتك الرقمية.";
+
+document.getElementById("whyTitle").innerHTML=
+"لماذا <span>أثر؟</span>";
+
+document.getElementById("whyDesc").innerText=
+"نجعل دخول مشروعك إلى العالم الرقمي أمرًا بسيطًا.";
+
+document.getElementById("why1Title").innerText="احترافي";
+document.getElementById("why1Text").innerText="تصميمات حديثة تجعل مشروعك يبدو أكثر احترافية وثقة.";
+
+document.getElementById("why2Title").innerText="بسيط";
+document.getElementById("why2Text").innerText="بدون تعقيدات تقنية، نحن نهتم بكل شيء.";
+
+document.getElementById("why3Title").innerText="سعر مناسب";
+document.getElementById("why3Text").innerText="حلول رقمية احترافية بأسعار مناسبة للمشاريع.";
+
+document.getElementById("stepsTitle").innerHTML=
+"كيف <span>نعمل؟</span>";
+
+document.getElementById("stepsDesc").innerText=
+"ابدأ رحلتك الرقمية في ثلاث خطوات بسيطة.";
+
+document.getElementById("step1Title").innerText="تواصل معنا";
+document.getElementById("step1Text").innerText="أخبرنا عن مشروعك وما تحتاج إليه.";
+
+document.getElementById("step2Title").innerText="نحن نبني";
+document.getElementById("step2Text").innerText="نقوم بإنشاء حضور رقمي احترافي لمشروعك.";
+
+document.getElementById("step3Title").innerText="أنت تنمو";
+document.getElementById("step3Text").innerText="شارك صفحتك ووصل إلى المزيد من العملاء.";
+
+document.getElementById("workTitle").innerHTML=
+"نماذج من <span>أعمالنا</span>";
+
+document.getElementById("workDesc").innerText=
+"أمثلة للمشاريع التي يمكن لأثر مساعدتها رقميًا.";
+
+document.getElementById("work1Title").innerText="مطاعم";
+document.getElementById("work1Text").innerText="صفحات رقمية حديثة للمطاعم والكافيهات.";
+
+document.getElementById("work2Title").innerText="متاجر ملابس";
+document.getElementById("work2Text").innerText="صفحات احترافية لمتاجر الملابس والأزياء.";
+
+document.getElementById("work3Title").innerText="خدمات طبية";
+document.getElementById("work3Text").innerText="مواقع منظمة واحترافية للعيادات والخدمات الطبية.";
+
+document.getElementById("packagesTitle").innerHTML=
+"اختر <span>باقتك</span>";
+
+document.getElementById("packagesDesc").innerText=
+"اختر الباقة المناسبة لمشروعك.";
+
+document.getElementById("starterTitle").innerText="البداية";
+document.getElementById("starterBtn").innerText="ابدأ الآن";
+
+document.getElementById("businessTitle").innerText="الأعمال";
+document.getElementById("popularBadge").innerText="الأكثر طلبًا";
+document.getElementById("businessBtn").innerText="اختر الباقة";
+
+document.getElementById("premiumTitle").innerText="المميزة";
+document.getElementById("premiumBtn").innerText="ابدأ الآن";
+
+document.getElementById("starter1").innerText="معلومات المشروع";
+document.getElementById("starter2").innerText="بيانات التواصل";
+document.getElementById("starter3").innerText="زر واتساب";
+document.getElementById("starter4").innerText="متوافق مع الهاتف";
+document.getElementById("starter5").innerText="رمز QR";
+
+document.getElementById("business1").innerText="كل ما في باقة البداية";
+document.getElementById("business2").innerText="تصميم احترافي";
+document.getElementById("business3").innerText="قسم للخدمات";
+document.getElementById("business4").innerText="معرض صور";
+document.getElementById("business5").innerText="روابط التواصل الاجتماعي";
+document.getElementById("business6").innerText="تعديل مجاني واحد";
+
+document.getElementById("premium1").innerText="كل ما في باقة الأعمال";
+document.getElementById("premium2").innerText="تصميم مخصص";
+document.getElementById("premium3").innerText="أقسام متقدمة";
+document.getElementById("premium4").innerText="نموذج تواصل";
+document.getElementById("premium5").innerText="تحديثات لمدة شهر";
+document.getElementById("premium6").innerText="دعم أولوية";
+
+document.getElementById("contactTitle").innerHTML=
+"ابدأ <span>رحلتك</span>";
+
+document.getElementById("contactDesc").innerText=
+"أخبرنا عن مشروعك وسنتواصل معك.";
+
+document.getElementById("clientName").placeholder="الاسم";
+document.getElementById("businessName").placeholder="اسم المشروع";
+document.getElementById("phoneNumber").placeholder="رقم الهاتف";
+document.getElementById("clientMessage").placeholder="أخبرنا عن مشروعك";
+document.getElementById("sendBtn").innerText="إرسال الطلب";
+
+document.getElementById("typeDefault").innerText="اختر نوع المشروع";
+document.getElementById("type1").innerText="مطعم";
+document.getElementById("type2").innerText="متجر ملابس";
+document.getElementById("type3").innerText="صالون تجميل";
+document.getElementById("type4").innerText="خدمات طبية";
+document.getElementById("type5").innerText="عقارات";
+document.getElementById("type6").innerText="أخرى";
+
+document.getElementById("footerText").innerText="اترك أثرك.";
+
+}
+
+else{
+
+location.reload();
+
+}
+
+}
+
+
+/* WHATSAPP FORM */
+
 document.getElementById("contactForm").addEventListener(
-
 "submit",
-
-function(event) {
+function(event){
 
 event.preventDefault();
 
-var name =
-document.getElementById("clientName").value;
+var name=document.getElementById("clientName").value;
+var business=document.getElementById("businessName").value;
+var phone=document.getElementById("phoneNumber").value;
+var type=document.getElementById("businessType").value;
+var message=document.getElementById("clientMessage").value;
 
-var business =
-document.getElementById("businessName").value;
+/* ضع رقمك هنا */
 
-var phone =
-document.getElementById("phoneNumber").value;
+var whatsappNumber="201000000000";
 
-var type =
-document.getElementById("businessType").value;
+var whatsappMessage=
 
-var message =
-document.getElementById("clientMessage").value;
+"Hello ATHAR!%0A%0A"+
 
+"Name: "+name+"%0A"+
 
-/* ضع رقم واتساب هنا */
+"Business: "+business+"%0A"+
 
-var whatsappNumber = "201289122717";
+"Phone: "+phone+"%0A"+
 
+"Business Type: "+type+"%0A"+
 
-var whatsappMessage =
+"Message: "+message;
 
-"Hello ATHAR!%0A%0A" +
+window.open(
 
-"NEW CLIENT REQUEST%0A%0A" +
+"https://wa.me/"+whatsappNumber+"?text="+whatsappMessage,
 
-"Name: " + name + "%0A" +
+"_blank"
 
-"Business: " + business + "%0A" +
-
-"Phone: " + phone + "%0A" +
-
-"Business Type: " + type + "%0A" +
-
-"Message: " + message;
-
-
-var url =
-
-"https://wa.me/" +
-
-whatsappNumber +
-
-"?text=" +
-
-whatsappMessage;
-
-
-window.open(url, "_blank");
+);
 
 }
 
@@ -1239,4 +1049,4 @@ window.open(url, "_blank");
 </script>
 
 </body>
-   </html>
+    </html>
