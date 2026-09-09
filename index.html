@@ -1,232 +1,1121 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" id="htmlRoot" class="scroll-smooth">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATHAR - Smart Digital Page</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts: Cairo for Arabic, Poppins for English -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', 'Cairo', sans-serif;
-        }
-        [dir="rtl"] body {
-            font-family: 'Cairo', 'Poppins', sans-serif;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="ATHAR creates smart digital pages for businesses.">
+<meta name="theme-color" content="#0b0b0b">
+
+<title>ATHAR | Leave Your Mark</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.6;
+}
+
+:root{
+    --gold:#d4af37;
+    --dark:#0b0b0b;
+    --dark2:#121212;
+    --card:#181818;
+    --gray:#aaaaaa;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 7%;
+    background:rgba(11,11,11,.97);
+    border-bottom:1px solid #292929;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a{
+    color:#ccc;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.language-btn{
+    background:var(--gold);
+    color:#111;
+    border:none;
+    padding:9px 16px;
+    border-radius:7px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:70px 20px;
+    background:radial-gradient(circle at top,#302611,#15130d 40%,#0b0b0b 75%);
+}
+
+.hero-logo{
+    width:210px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:58px;
+    max-width:900px;
+    line-height:1.15;
+}
+
+.gold{
+    color:var(--gold);
+}
+
+.hero-sub{
+    color:var(--gold);
+    font-size:21px;
+    margin:20px 0 10px;
+}
+
+.hero p{
+    max-width:700px;
+    color:var(--gray);
+    font-size:17px;
+    margin:0 auto 30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+/* BUTTONS */
+
+.btn{
+    display:inline-block;
+    background:var(--gold);
+    color:#111;
+    padding:15px 28px;
+    border-radius:8px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#fff;
+}
+
+.btn-outline{
+    display:inline-block;
+    background:transparent;
+    color:var(--gold);
+    padding:14px 28px;
+    border:1px solid var(--gold);
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn-sm{
+    padding:10px 20px;
+    font-size:14px;
+    margin-top:15px;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:90px 8%;
+    text-align:center;
+}
+
+.dark{
+    background:var(--dark2);
+}
+
+.section-title{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.section-title span{
+    color:var(--gold);
+}
+
+.section-description{
+    max-width:700px;
+    margin:0 auto 45px;
+    color:#999;
+}
+
+/* CARDS */
+
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:22px;
+}
+
+.card{
+    width:300px;
+    padding:30px 25px;
+    background:var(--card);
+    border:1px solid #292929;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    border-color:var(--gold);
+    transform:translateY(-5px);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#aaa;
+}
+
+/* STEPS */
+
+.step{
+    width:260px;
+}
+
+.number{
+    width:65px;
+    height:65px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--gold);
+    color:#111;
+    border-radius:50%;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* PACKAGE */
+
+.package{
+    max-width:480px;
+    margin:auto;
+    padding:40px 30px;
+    background:var(--card);
+    border:2px solid var(--gold);
+    border-radius:18px;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 16px;
+    background:var(--gold);
+    color:#111;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.price{
+    font-size:42px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.package ul{
+    list-style:none;
+    text-align:left;
+    margin:25px 0;
+}
+
+.package li{
+    padding:12px;
+    border-bottom:1px solid #303030;
+    color:#bbb;
+}
+
+.package li:before{
+    content:"✓ ";
+    color:var(--gold);
+    font-weight:bold;
+}
+
+/* QR */
+
+.qr-box{
+    max-width:600px;
+    margin:auto;
+    padding:35px;
+    background:var(--card);
+    border:1px solid var(--gold);
+    border-radius:18px;
+}
+
+.qr-box img{
+    width:220px;
+    background:#fff;
+    padding:10px;
+    border-radius:10px;
+    margin:20px;
+}
+
+/* SOCIAL */
+
+.social-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.social{
+    width:210px;
+    padding:17px;
+    background:var(--card);
+    color:#fff;
+    border:1px solid #303030;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.social:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+}
+
+/* FORM */
+
+.contact-form{
+    max-width:600px;
+    margin:auto;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:16px;
+    margin-bottom:15px;
+    background:#181818;
+    color:#fff;
+    border:1px solid #333;
+    border-radius:8px;
+    font-size:16px;
+}
+
+textarea{
+    height:130px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:var(--gold);
+}
+
+/* FLOATING BUTTON */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    z-index:2000;
+}
+
+.top{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    width:48px;
+    height:48px;
+    background:#222;
+    color:var(--gold);
+    border:1px solid #444;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+}
+
+/* FOOTER */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:45px 20px;
+    color:#777;
+}
+
+footer h2{
+    color:var(--gold);
+    letter-spacing:7px;
+    margin-bottom:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    nav{
+        padding:10px 20px;
+    }
+
+    .nav-links a{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .section{
+        padding:65px 20px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .card,
+    .step,
+    .social{
+        width:100%;
+        max-width:350px;
+    }
+
+}
+
+</style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
 
-    <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center gap-3">
-                <span class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">ATHAR</span>
-            </div>
 
-            <!-- Desktop Links -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#features" class="hover:text-cyan-400 transition" data-en="Features" data-ar="المميزات">Features</a>
-                <a href="#work" class="hover:text-cyan-400 transition" data-en="Our Work" data-ar="أعمالنا">Our Work</a>
-                <a href="#how" class="hover:text-cyan-400 transition" data-en="How It Works" data-ar="كيف نعمل">How It Works</a>
-                <a href="#package" class="hover:text-cyan-400 transition" data-en="Smart Page" data-ar="الباقة">Smart Page</a>
-                <a href="#contact" class="hover:text-cyan-400 transition" data-en="Contact" data-ar="تواصل معنا">Contact</a>
-            </div>
+<body>
 
-            <!-- Actions (Language Switcher & CTA) -->
-            <div class="flex items-center gap-4">
-                <button id="langToggle" onclick="toggleLanguage()" class="px-3.5 py-1.5 rounded-full border border-slate-700 hover:border-cyan-400 text-xs font-semibold tracking-wide transition bg-slate-900 text-cyan-400 flex items-center gap-1.5 cursor-pointer">
-                    🌐 <span id="langText">العربية</span>
-                </button>
-                <a href="#package" class="hidden sm:inline-block px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs transition shadow-lg shadow-cyan-500/25" data-en="Get Started" data-ar="ابدأ الآن">Get Started</a>
-            </div>
-        </div>
-    </nav>
+<!-- NAVBAR -->
 
-    <!-- Hero Section -->
-    <header class="relative overflow-hidden py-24 md:py-32 px-6 text-center">
-        <div class="max-w-4xl mx-auto space-y-8">
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
-                <span data-en="Your Business Deserves To" data-ar="نشاطك التجاري يستحق أن">Your Business Deserves To</span> <br/>
-                <span class="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent" data-en="Leave A Mark." data-ar="يترك أثراً حقيقياً.">Leave A Mark.</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light" data-en="Everything your customers need. One smart link." data-ar="كل ما يحتاجه عملاؤك مجتمعاً في رابط ذكي واحد.">
-                Everything your customers need. One smart link.
-            </p>
-            <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base" data-en="ATHAR creates smart digital pages that bring your business, services, contact information and social media together in one place." data-ar="أثر تصمم صفحات رقمية ذكية تجمع نشاطك التجاري، خدماتك، معلومات التواصل، ووسائل التواصل الاجتماعي في مكان واحد بكل احترافية.">
-                ATHAR creates smart digital pages that bring your business, services, contact information and social media together in one place.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 pt-4">
-                <a href="#package" class="px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition shadow-xl shadow-cyan-500/20" data-en="CREATE YOUR SMART PAGE" data-ar="أنشئ صفحتك الذكية">CREATE YOUR SMART PAGE</a>
-                <a href="https://wa.me/201289122717" target="_blank" class="px-8 py-4 rounded-xl border border-slate-700 hover:border-cyan-400 text-slate-200 font-semibold text-sm transition" data-en="CHAT WITH US" data-ar="تواصل عبر واتساب">CHAT WITH US</a>
-            </div>
-        </div>
-    </header>
+<nav>
 
-    <!-- Features Section -->
-    <section id="features" class="py-24 px-6 bg-slate-900/50 border-y border-slate-800/80">
-        <div class="max-w-7xl mx-auto space-y-16">
-            <div class="text-center space-y-4">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
-                    <span data-en="WHAT'S INSIDE YOUR" data-ar="ماذا تضم">WHAT'S INSIDE YOUR</span> <span class="text-cyan-400" data-en="SMART PAGE?" data-ar="صفحتك الذكية؟">SMART PAGE?</span>
-                </h2>
-                <p class="text-slate-400 max-w-xl mx-auto text-sm" data-en="Everything your customer needs in one professional link." data-ar="كل ما يطلبه عميلك متوفر في رابط احترافي سهل الوصول.">Everything your customer needs in one professional link.</p>
-            </div>
+<div class="logo">
+<img src="file_00000000031c8210bc841a03c3660fad.png" alt="ATHAR Logo">
+</div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">🌐</div>
-                    <h3 class="text-xl font-semibold" data-en="DIGITAL PAGE" data-ar="صفحة رقمية متكاملة">DIGITAL PAGE</h3>
-                    <p class="text-slate-400 text-sm" data-en="A professional page designed for your business." data-ar="صفحة أنيقة ومصممة خصيصاً لتعكس هوية مشروعك.">A professional page designed for your business.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">💬</div>
-                    <h3 class="text-xl font-semibold" data-en="DIRECT WHATSAPP" data-ar="واتساب مباشر">DIRECT WHATSAPP</h3>
-                    <p class="text-slate-400 text-sm" data-en="Customers contact you instantly with one click." data-ar="يستطيع عملاؤك مراسلتك بضغطة زر واحدة بكل سهولة.">Customers contact you instantly with one click.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">📍</div>
-                    <h3 class="text-xl font-semibold" data-en="LOCATION" data-ar="موقعك على الخريطة">LOCATION</h3>
-                    <p class="text-slate-400 text-sm" data-en="Help customers find your business easily." data-ar="وجه عملائك لمقر شركتك أو فرعك عبر خرائط جوجل بدقة.">Help customers find your business easily.</p>
-                </div>
-                <!-- Feature 4 -->
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">📸</div>
-                    <h3 class="text-xl font-semibold" data-en="PHOTOS & SERVICES" data-ar="الخدمات والمعرض">PHOTOS & SERVICES</h3>
-                    <p class="text-slate-400 text-sm" data-en="Show your services and best work." data-ar="اعرض معرض أعمالك وصور منتجاتك وخدماتك بشكل جذاب.">Show your services and best work.</p>
-                </div>
-                <!-- Feature 5 -->
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">🔗</div>
-                    <h3 class="text-xl font-semibold" data-en="SOCIAL LINKS" data-ar="روابط السوشيال ميديا">SOCIAL LINKS</h3>
-                    <p class="text-slate-400 text-sm" data-en="All your important links in one place." data-ar="اجمع كافة حساباتك وروابطك المهمة في واجهة واحدة.">All your important links in one place.</p>
-                </div>
-                <!-- Feature 6 -->
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl">▣</div>
-                    <h3 class="text-xl font-semibold" data-en="QR CODE" data-ar="باركود مخصص">QR CODE</h3>
-                    <p class="text-slate-400 text-sm" data-en="One scan gives access to your business." data-ar="مسح واحد بالهاتف يفتح لعميلك باب التعرف على نشاطك.">One scan gives access to your business.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="nav-links">
 
-    <!-- Our Work Section -->
-    <section id="work" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto space-y-16">
-            <div class="text-center space-y-4">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
-                    <span data-en="OUR" data-ar="معرض">OUR</span> <span class="text-cyan-400" data-en="WORK" data-ar="أعمالنا">WORK</span>
-                </h2>
-                <p class="text-slate-400 text-sm" data-en="Explore some of our live digital projects and business demos." data-ar="استعرض بعض مشاريعنا الرقمية الحية ونماذج الأعمال السابقة.">Explore some of our live digital projects and business demos.</p>
-            </div>
+<a href="#features" data-en="Features" data-ar="المميزات">Features</a>
+<a href="#work" data-en="Our Work" data-ar="أعمالنا">Our Work</a>
+<a href="#how" data-en="How It Works" data-ar="كيف نعمل">How It Works</a>
+<a href="#package" data-en="Smart Page" data-ar="الصفحة الذكية">Smart Page</a>
+<a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
 
-            <div class="max-w-md mx-auto p-8 rounded-3xl bg-slate-900 border border-slate-800 space-y-6 text-center shadow-xl">
-                <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center mx-auto text-3xl">🦷</div>
-                <div class="space-y-2">
-                    <h3 class="text-xl font-bold">NOVO Dental Clinic</h3>
-                    <p class="text-slate-400 text-sm" data-en="Website Demo for Dental Clinics" data-ar="نموذج موقع احترافي لعيادات الأسنان">Website Demo for Dental Clinics</p>
-                </div>
-                <a href="https://greenvideoshiko-del.github.io/novo-dental/" target="_blank" class="inline-block w-full py-3 rounded-xl bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 font-semibold text-sm transition" data-en="View Live Demo" data-ar="معاينة الموقع الحي">View Live Demo</a>
-            </div>
-        </div>
-    </section>
+<button class="language-btn" onclick="toggleLanguage()" id="languageBtn">
+عربي
+</button>
 
-    <!-- How It Works -->
-    <section id="how" class="py-24 px-6 bg-slate-900/50 border-t border-slate-800/80">
-        <div class="max-w-7xl mx-auto space-y-16">
-            <div class="text-center space-y-4">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
-                    <span data-en="HOW IT" data-ar="كيف يتم">HOW IT</span> <span class="text-cyan-400" data-en="WORKS" data-ar="العمل؟">WORKS</span>
-                </h2>
-                <p class="text-slate-400 text-sm" data-en="Three simple steps." data-ar="ثلاث خطوات بسيطة وتبدأ صفحتك.">Three simple steps.</p>
-            </div>
+</div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
-                    <div class="w-12 h-12 rounded-full bg-cyan-500 text-slate-950 font-bold flex items-center justify-center mx-auto text-lg">1</div>
-                    <h3 class="text-xl font-semibold" data-en="TELL US" data-ar="أخبرنا بتفاصيلك">TELL US</h3>
-                    <p class="text-slate-400 text-sm" data-en="Tell us about your business." data-ar="شاركنا بمعلومات وخدمات نشاطك التجاري.">Tell us about your business.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
-                    <div class="w-12 h-12 rounded-full bg-cyan-500 text-slate-950 font-bold flex items-center justify-center mx-auto text-lg">2</div>
-                    <h3 class="text-xl font-semibold" data-en="WE BUILD" data-ar="نحن نصمم ونطور">WE BUILD</h3>
-                    <p class="text-slate-400 text-sm" data-en="We create your Smart Page." data-ar="نقوم بتصميم صفحتك الذكية بكل احترافية.">We create your Smart Page.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
-                    <div class="w-12 h-12 rounded-full bg-cyan-500 text-slate-950 font-bold flex items-center justify-center mx-auto text-lg">3</div>
-                    <h3 class="text-xl font-semibold" data-en="YOU SHARE" data-ar="انشر صفحتك">YOU SHARE</h3>
-                    <p class="text-slate-400 text-sm" data-en="Share your link with customers." data-ar="ابدأ بمشاركة الرابط والباركود مع عملائك.">Share your link with customers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</nav>
 
-    <!-- Pricing / Package -->
-    <section id="package" class="py-24 px-6">
-        <div class="max-w-4xl mx-auto">
-            <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-cyan-500/30 text-center space-y-8 shadow-2xl relative overflow-hidden">
-                <div class="absolute -top-12 -right-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-400 font-semibold text-xs tracking-wider" data-en="LAUNCH OFFER" data-ar="عرض الإطلاق">LAUNCH OFFER</div>
-                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight" data-en="ATHAR SMART PAGE" data-ar="باقة أثر الذكية">ATHAR SMART PAGE</h2>
-                <div class="text-4xl md:text-5xl font-black text-cyan-400">500 <span class="text-xl font-medium text-slate-400" data-en="EGP" data-ar="جنيه">EGP</span></div>
 
-                <ul class="max-w-md mx-auto space-y-4 text-left md:text-start text-sm text-slate-300">
-                    <li class="flex items-center gap-3">✅ <span data-en="Professional Digital Page" data-ar="صفحة رقمية احترافية">Professional Digital Page</span></li>
-                    <li class="flex items-center gap-3">✅ <span data-en="Mobile Friendly Design" data-ar="تصميم متوافق مع كافة الهواتف">Mobile Friendly Design</span></li>
-                    <li class="flex items-center gap-3">✅ <span data-en="Services & Information" data-ar="معلومات الخدمات والأعمال">Services & Information</span></li>
-                    <li class="flex items-center gap-3">✅ <span data-en="Business Photos" data-ar="معرض الصور الخاص بنشاطك">Business Photos</span></li>
-                    <li class="flex items-center gap-3">✅ <span data-en="Direct WhatsApp Button" data-ar="زر تواصل مباشر للواتساب">Direct WhatsApp Button</span></li>
-                    <li class="flex items-center gap-3">✅ <span data-en="Google Maps Location" data-ar="موقعك على خرائط جوجل">Google Maps Location</span></li>
-                    <li class="flex items-center gap-3">✅ <span data-en="Social Media Links" data-ar="روابط وسائل التواصل الاجتماعي">Social Media Links</span></li>
-                    <li class="flex items-center gap-3">✅ <span data-en="Custom QR Code" data-ar="باركود خاص بمشروعك (QR Code)">Custom QR Code</span></li>
-                    <li class="flex items-center gap-3">✅ <span data-en="Arabic / English" data-ar="دعم اللغتين (عربي / إنجليزي)">Arabic / English</span></li>
-                </ul>
+<!-- HERO -->
 
-                <div class="pt-4">
-                    <a href="https://wa.me/201289122717" target="_blank" class="inline-block px-10 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold text-sm transition shadow-xl shadow-cyan-500/25" data-en="GET YOUR SMART PAGE" data-ar="احصل على صفحتك الآن">GET YOUR SMART PAGE</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
 
-    <!-- QR Code Section -->
-    <section class="py-24 px-6 bg-slate-900/50 border-t border-slate-800/80 text-center">
-        <div class="max-w-2xl mx-auto space-y-8">
-            <h2 class="text-3xl font-bold" data-en="YOUR BUSINESS. ONE SCAN AWAY." data-ar="نشاطك التجاري.. بمسحة واحدة.">YOUR BUSINESS. ONE SCAN AWAY.</h2>
-            <p class="text-slate-400 text-sm" data-en="Share your business instantly using a QR Code." data-ar="شارك مشروعك بسهولة فائقة باستخدام الباركود.">Share your business instantly using a QR Code.</p>
-            
-            <div class="p-6 bg-slate-900 border border-slate-800 rounded-3xl inline-block shadow-xl">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://greenvideoshiko-del.github.io/athar-egy-/" alt="ATHAR QR Code" class="rounded-xl mx-auto">
-                <p class="text-xs text-slate-400 mt-4" data-en="Scan to visit ATHAR" data-ar="امسح الكود لزيارة أثر">Scan to visit ATHAR</p>
-            </div>
-        </div>
-    </section>
+<img src="file_00000000031c8210bc841a03c3660fad.png"
+class="hero-logo"
+alt="ATHAR">
 
-    <!-- Social & Contact Links -->
-    <section id="contact" class="py-24 px-6">
-        <div class="max-w-4xl mx-auto text-center space-y-12">
-            <div class="space-y-4">
-                <h2 class="text-3xl md:text-4xl font-bold" data-en="CONNECT WITH ATHAR" data-ar="تواصل مع أثر">CONNECT WITH ATHAR</h2>
-                <p class="text-slate-400 text-sm" data-en="Follow our journey and contact us." data-ar="تابع رحلتنا وتواصل معنا عبر منصاتنا المختلفة.">Follow our journey and contact us.</p>
-            </div>
+<h1 id="heroTitle">
+Your Business Deserves To
+<span class="gold">Leave A Mark.</span>
+</h1>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <a href="https://www.facebook.com/share/1Ly8tnh3YQ/" target="_blank" class="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500 transition font-medium text-sm flex items-center justify-center gap-2">📘 Facebook</a>
-                <a href="https://www.instagram.com/your.informa?stkn=MXV4YmswamF3b3ZqZA==" target="_blank" class="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500 transition font-medium text-sm flex items-center justify-center gap-2">📸 Instagram</a>
-                <a href="https://vm.tiktok.com/ZS9SDXxM8TpD5-Sg0AX/" target="_blank" class="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500 transition font-medium text-sm flex items-center justify-center gap-2">🎵 TikTok</a>
-                <a href="https://www.snapchat.com/add/greenshikoo?share_id=SSaJJq7rJ_k&locale=ar-EG" target="_blank" class="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500 transition font-medium text-sm flex items-center justify-center gap-2">👻 Snapchat</a>
-                <a href="https://www.behance.net/sherifmamdouh5" target="_blank" class="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500 transition font-medium text-sm flex items-center justify-center gap-2">🎨 Behance</a>
-                <a href="https://wa.me/201289122717" target="_blank" class="p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500 transition font-medium text-sm flex items-center justify-center gap-2">💬 WhatsApp</a>
-            </div>
-        </div>
-    </section>
+<div class="hero-sub" id="heroSub">
+Everything your customers need. One smart link.
+</div>
 
-    <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-slate-800/80 text-center text-slate-500 text-xs space
+<p id="heroText">
+ATHAR creates smart digital pages that bring your business,
+services, contact information and social media together in one place.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#package" class="btn" id="createBtn">
+CREATE YOUR SMART PAGE
+</a>
+
+<a href="https://wa.me/201289122717"
+target="_blank"
+class="btn-outline"
+id="chatBtn">
+CHAT WITH US
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="section dark" id="features">
+
+<h2 class="section-title" id="featuresTitle">
+WHAT'S INSIDE YOUR <span>SMART PAGE?</span>
+</h2>
+
+<p class="section-description" id="featuresDesc">
+Everything your customer needs in one professional link.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3 id="feature1Title">DIGITAL PAGE</h3>
+<p id="feature1Text">A professional page designed for your business.</p>
+</div>
+
+<div class="card">
+<div class="icon">💬</div>
+<h3 id="feature2Title">DIRECT WHATSAPP</h3>
+<p id="feature2Text">Customers contact you instantly with one click.</p>
+</div>
+
+<div class="card">
+<div class="icon">📍</div>
+<h3 id="feature3Title">LOCATION</h3>
+<p id="feature3Text">Help customers find your business easily.</p>
+</div>
+
+<div class="card">
+<div class="icon">📸</div>
+<h3 id="feature4Title">PHOTOS & SERVICES</h3>
+<p id="feature4Text">Show your services and best work.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔗</div>
+<h3 id="feature5Title">SOCIAL LINKS</h3>
+<p id="feature5Text">All your important links in one place.</p>
+</div>
+
+<div class="card">
+<div class="icon">▣</div>
+<h3 id="feature6Title">QR CODE</h3>
+<p id="feature6Text">One scan gives access to your business.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OUR WORK -->
+
+<section class="section" id="work">
+
+<h2 class="section-title" id="workTitle">
+OUR <span>WORK</span>
+</h2>
+
+<p class="section-description" id="workDesc">
+Explore some of our live digital projects and business demos.
+</p>
+
+<div class="grid">
+
+<div class="card" style="max-width: 380px; width: 100%;">
+<div class="icon">🦷</div>
+<h3 id="work1Title">NOVO Dental Clinic</h3>
+<p id="work1Text" style="margin-bottom: 20px;">Website Demo for Dental Clinics</p>
+<a href="https://greenvideoshiko-del.github.io/novo-dental/" target="_blank" class="btn btn-sm" id="work1Btn">View Live Demo</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section dark" id="how">
+
+<h2 class="section-title" id="howTitle">
+HOW IT <span>WORKS</span>
+</h2>
+
+<p class="section-description" id="howDesc">
+Three simple steps.
+</p>
+
+<div class="grid">
+
+<div class="step">
+<div class="number">1</div>
+<h3 id="step1Title">TELL US</h3>
+<p id="step1Text">Tell us about your business.</p>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3 id="step2Title">WE BUILD</h3>
+<p id="step2Text">We create your Smart Page.</p>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3 id="step3Title">YOU SHARE</h3>
+<p id="step3Text">Share your link with customers.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PACKAGE -->
+
+<section class="section" id="package">
+
+<h2 class="section-title" id="packageTitle">
+ATHAR <span>SMART PAGE</span>
+</h2>
+
+<p class="section-description" id="packageDesc">
+Everything your business needs online.
+</p>
+
+<div class="package">
+
+<div class="badge" id="badge">LAUNCH OFFER</div>
+
+<h2>ATHAR SMART PAGE</h2>
+
+<div class="price">500 EGP</div>
+
+<ul id="packageList">
+
+<li>Professional Digital Page</li>
+<li>Mobile Friendly Design</li>
+<li>Services & Information</li>
+<li>Business Photos</li>
+<li>Direct WhatsApp Button</li>
+<li>Google Maps Location</li>
+<li>Social Media Links</li>
+<li>Custom QR Code</li>
+<li>Arabic / English</li>
+
+</ul>
+
+<a href="#contact" class="btn" id="orderBtn">
+GET YOUR SMART PAGE
+</a>
+
+</div>
+
+</section>
+
+
+<!-- QR -->
+
+<section class="section dark">
+
+<h2 class="section-title" id="qrTitle">
+YOUR BUSINESS. <span>ONE SCAN AWAY.</span>
+</h2>
+
+<p class="section-description" id="qrDesc">
+Share your business instantly using a QR Code.
+</p>
+
+<div class="qr-box">
+
+<h2 id="qrBoxTitle">SCAN. CONNECT. EXPLORE.</h2>
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://greenvideoshiko-del.github.io/athar-egy-/"
+alt="ATHAR QR Code">
+
+<p id="qrText">
+Scan to visit ATHAR.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SOCIAL -->
+
+<section class="section">
+
+<h2 class="section-title" id="socialTitle">
+CONNECT WITH <span>ATHAR</span>
+</h2>
+
+<p class="section-description" id="socialDesc">
+Follow our journey and contact us.
+</p>
+
+<div class="social-grid">
+
+<a class="social"
+href="https://www.facebook.com/share/1Ly8tnh3YQ/"
+target="_blank">📘 Facebook</a>
+
+<a class="social"
+href="https://www.instagram.com/your.informa?stkn=MXV4YmswamF3b3ZqZA=="
+target="_blank">📸 Instagram</a>
+
+<a class="social"
+href="https://vm.tiktok.com/ZS9SDXxM8TpD5-Sg0AX/"
+target="_blank">🎵 TikTok</a>
+
+<a class="social"
+href="https://www.snapchat.com/add/greenshikoo?share_id=SSaJJq7rJ_k&locale=ar-EG"
+target="_blank">👻 Snapchat</a>
+
+<a class="social"
+href="https://www.behance.net/sherifmamdouh5"
+target="_blank">🎨 Behance</a>
+
+<a class="social"
+href="https://wa.me/201289122717"
+target="_blank">💬 WhatsApp</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section dark" id="contact">
+
+<h2 class="section-title" id="contactTitle">
+CREATE YOUR <span>SMART PAGE</span>
+</h2>
+
+<p class="section-description" id="contactDesc">
+Tell us about your business.
+</p>
+
+<form class="contact-form" id="contactForm">
+
+<input type="text"
+id="clientName"
+placeholder="Your Name"
+required>
+
+<input type="text"
+id="businessName"
+placeholder="Business Name"
+required>
+
+<input type="tel"
+id="phoneNumber"
+placeholder="Phone Number"
+required>
+
+<select id="businessType">
+
+<option value="">Select Business Type</option>
+
+<option>Restaurant</option>
+<option>Clinic</option>
+<option>Beauty Salon</option>
+<option>Barbershop</option>
+<option>Store</option>
+<option>Real Estate</option>
+<option>Other</option>
+
+</select>
+
+<textarea
+id="clientMessage"
+placeholder="Tell us about your business"></textarea>
+
+<button type="submit" class="btn" id="sendBtn">
+SEND REQUEST
+</button>
+
+</form>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>ATHAR</h2>
+
+<p id="footerText">
+EVERYTHING YOUR CUSTOMERS NEED. ONE SMART LINK.
+</p>
+
+<br>
+
+<p>© 2026 ATHAR. All Rights Reserved.</p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a href="https://wa.me/201289122717"
+class="whatsapp"
+target="_blank">
+💬
+</a>
+
+
+<!-- TOP -->
+
+<a href="#" class="top">↑</a>
+
+
+<script>
+
+/* ======================================
+LANGUAGE DATA
+====================================== */
+
+const english = {
+
+heroTitle:'Your Business Deserves To <span class="gold">Leave A Mark.</span>',
+
+heroSub:'Everything your customers need. One smart link.',
+
+heroText:'ATHAR creates smart digital pages that bring your business, services, contact information and social media together in one place.',
+
+createBtn:'CREATE YOUR SMART PAGE',
+
+chatBtn:'CHAT WITH US',
+
+featuresTitle:'WHAT\'S INSIDE YOUR <span>SMART PAGE?</span>',
+
+featuresDesc:'Everything your customer needs in one professional link.',
+
+feature1Title:'DIGITAL PAGE',
+feature1Text:'A professional page designed for your business.',
+
+feature2Title:'DIRECT WHATSAPP',
+feature2Text:'Customers contact you instantly with one click.',
+
+feature3Title:'LOCATION',
+feature3Text:'Help customers find your business easily.',
+
+feature4Title:'PHOTOS & SERVICES',
+feature4Text:'Show your services and best work.',
+
+feature5Title:'SOCIAL LINKS',
+feature5Text:'All your important links in one place.',
+
+feature6Title:'QR CODE',
+feature6Text:'One scan gives access to your business.',
+
+workTitle:'OUR <span>WORK</span>',
+workDesc:'Explore some of our live digital projects and business demos.',
+work1Title:'NOVO Dental Clinic',
+work1Text:'Website Demo for Dental Clinics',
+work1Btn:'View Live Demo',
+
+howTitle:'HOW IT <span>WORKS</span>',
+
+howDesc:'Three simple steps.',
+
+step1Title:'TELL US',
+step1Text:'Tell us about your business.',
+
+step2Title:'WE BUILD',
+step2Text:'We create your Smart Page.',
+
+step3Title:'YOU SHARE',
+step3Text:'Share your link with customers.',
+
+packageTitle:'ATHAR <span>SMART PAGE</span>',
+
+packageDesc:'Everything your business needs online.',
+
+badge:'LAUNCH OFFER',
+
+orderBtn:'GET YOUR SMART PAGE',
+
+qrTitle:'YOUR BUSINESS. <span>ONE SCAN AWAY.</span>',
+
+qrDesc:'Share your business instantly using a QR Code.',
+
+qrBoxTitle:'SCAN. CONNECT. EXPLORE.',
+
+qrText:'Scan to visit ATHAR.',
+
+socialTitle:'CONNECT WITH <span>ATHAR</span>',
+
+socialDesc:'Follow our journey and contact us.',
+
+contactTitle:'CREATE YOUR <span>SMART PAGE</span>',
+
+contactDesc:'Tell us about your business.',
+
+sendBtn:'SEND REQUEST',
+
+footerText:'EVERYTHING YOUR CUSTOMERS NEED. ONE SMART LINK.'
+
+};
+
+
+/* ======================================
+ARABIC DATA
+====================================== */
+
+const arabic = {
+
+heroTitle:'مشروعك يستحق أن <span class="gold">يترك أثرًا.</span>',
+
+heroSub:'كل ما يحتاجه عملاؤك في رابط ذكي واحد.',
+
+heroText:'أثر تنشئ صفحات رقمية ذكية تجمع معلومات مشروعك وخدماتك وطرق التواصل وحسابات السوشيال ميديا في مكان واحد.',
+
+createBtn:'أنشئ صفحتك الذكية',
+
+chatBtn:'تحدث معنا',
+
+featuresTitle:'ماذا تحتوي <span>صفحتك الذكية؟</span>',
+
+featuresDesc:'كل ما يحتاجه العميل في رابط احترافي واحد.',
+
+feature1Title:'صفحة رقمية',
+feature1Text:'صفحة احترافية مصممة لمشروعك.',
+
+feature2Title:'واتساب مباشر',
+feature2Text:'يتواصل العميل معك فورًا بضغطة واحدة.',
+
+feature3Title:'موقع المشروع',
+feature3Text:'ساعد العملاء في الوصول إليك بسهولة.',
+
+feature4Title:'الصور والخدمات',
+feature4Text:'اعرض خدماتك وأفضل أعمالك.',
+
+feature5Title:'روابط السوشيال',
+feature5Text:'كل حساباتك المهمة في مكان واحد.',
+
+feature6Title:'QR Code',
+feature6Text:'مسح واحد يفتح مشروعك.',
+
+workTitle:'أعمالنا',
+workDesc:'استعرض بعض مشاريعنا الرقمية ونماذج الأعمال الحية.',
+work1Title:'عيادة NOVO لأسنان',
+work1Text:'نموذج موقع مخصص لعيادات الأسنان',
+work1Btn:'عرض الموقع الحي',
+
+howTitle:'كيف <span>نعمل؟</span>',
+
+howDesc:'ثلاث خطوات بسيطة.',
+
+step1Title:'أخبرنا',
+step1Text:'أخبرنا عن مشروعك.',
+
+step2Title:'نحن نبني',
+step2Text:'نقوم بإنشاء صفحتك الذكية.',
+
+step3Title:'أنت تشارك',
+step3Text:'شارك رابطك مع العملاء.',
+
+packageTitle:'صفحة <span>ATHAR الذكية</span>',
+
+packageDesc:'كل ما يحتاجه مشروعك على الإنترنت.',
+
+badge:'عرض الإطلاق',
+
+orderBtn:'احصل على صفحتك الذكية',
+
+qrTitle:'مشروعك على بعد <span>مسح واحد.</span>',
+
+qrDesc:'شارك مشروعك فورًا باستخدام QR Code.',
+
+qrBoxTitle:'امسح. تواصل. اكتشف.',
+
+qrText:'امسح الكود لزيارة ATHAR.',
+
+socialTitle:'تواصل مع <span>ATHAR</span>',
+
+socialDesc:'تابعنا وتواصل معنا.',
+
+contactTitle:'أنشئ <span>صفحتك الذكية</span>',
+
+contactDesc:'أخبرنا عن مشروعك.',
+
+sendBtn:'إرسال الطلب',
+
+footerText:'كل ما يحتاجه عملاؤك في رابط ذكي واحد.'
+
+};
+
+
+/* ======================================
+LANGUAGE FUNCTION
+====================================== */
+
+let currentLanguage = 'en';
+
+function toggleLanguage(){
+
+    currentLanguage =
+    currentLanguage === 'en' ? 'ar' : 'en';
+
+    const data =
+    currentLanguage === 'en' ? english : arabic;
+
+
+    document.documentElement.lang =
+    currentLanguage === 'en' ? 'en' : 'ar';
+
+
+    document.documentElement.dir =
+    currentLanguage === 'en' ? 'ltr' : 'rtl';
+
+
+    document.body.style.direction =
+    currentLanguage === 'en' ? 'ltr' : 'rtl';
+
+
+    document.getElementById('languageBtn').innerText =
+    currentLanguage === 'en' ? 'عربي' : 'EN';
+
+
+    /* Navigation */
+
+    const navLinks =
+    document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(function(link){
+
+        link.innerText =
+        currentLanguage === 'en'
+        ? link.dataset.en
+        : link.dataset.ar;
+
+    });
+
+
+    /* Change all text */
+
+    Object.keys(data).forEach(function(key){
+
+        const element =
+        document.getElementById(key);
+
+        if(element){
+
+            element.innerHTML =
+            data[key];
+
+        }
+
+    });
+
+
+    /* Placeholders */
+
+    if(currentLanguage === 'ar'){
+
+        document.getElementById('clientName').placeholder='الاسم';
+
+        document.getElementById('businessName').placeholder='اسم المشروع';
+
+        document.getElementById('phoneNumber').placeholder='رقم الهاتف';
+
+        document.getElementById('clientMessage').placeholder='أخبرنا عن مشروعك';
+
+    }
+
+    else{
+
+        document.getElementById('clientName').placeholder='Your Name';
+
+        document.getElementById('businessName').placeholder='Business Name';
+
+        document.getElementById('phoneNumber').placeholder='Phone Number';
+
+        document.getElementById('clientMessage').placeholder='Tell us about your business';
+
+    }
+
+}
+
+
+/* ======================================
+WHATSAPP FORM
