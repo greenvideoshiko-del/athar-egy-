@@ -166,6 +166,12 @@ nav{
     font-weight:bold;
 }
 
+.btn-sm{
+    padding:10px 20px;
+    font-size:14px;
+    margin-top:15px;
+}
+
 /* SECTIONS */
 
 .section{
@@ -467,11 +473,9 @@ footer h2{
 <div class="nav-links">
 
 <a href="#features" data-en="Features" data-ar="المميزات">Features</a>
-
+<a href="#work" data-en="Our Work" data-ar="أعمالنا">Our Work</a>
 <a href="#how" data-en="How It Works" data-ar="كيف نعمل">How It Works</a>
-
 <a href="#package" data-en="Smart Page" data-ar="الصفحة الذكية">Smart Page</a>
-
 <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
 
 <button class="language-btn" onclick="toggleLanguage()" id="languageBtn">
@@ -578,9 +582,35 @@ Everything your customer needs in one professional link.
 </section>
 
 
+<!-- OUR WORK -->
+
+<section class="section" id="work">
+
+<h2 class="section-title" id="workTitle">
+OUR <span>WORK</span>
+</h2>
+
+<p class="section-description" id="workDesc">
+Explore some of our live digital projects and business demos.
+</p>
+
+<div class="grid">
+
+<div class="card" style="max-width: 380px; width: 100%;">
+<div class="icon">🦷</div>
+<h3 id="work1Title">NOVO Dental Clinic</h3>
+<p id="work1Text" style="margin-bottom: 20px;">Website Demo for Dental Clinics</p>
+<a href="https://greenvideoshiko-del.github.io/novo-dental/" target="_blank" class="btn btn-sm" id="work1Btn">View Live Demo</a>
+</div>
+
+</div>
+
+</section>
+
+
 <!-- HOW IT WORKS -->
 
-<section class="section" id="how">
+<section class="section dark" id="how">
 
 <h2 class="section-title" id="howTitle">
 HOW IT <span>WORKS</span>
@@ -617,7 +647,7 @@ Three simple steps.
 
 <!-- PACKAGE -->
 
-<section class="section dark" id="package">
+<section class="section" id="package">
 
 <h2 class="section-title" id="packageTitle">
 ATHAR <span>SMART PAGE</span>
@@ -660,7 +690,7 @@ GET YOUR SMART PAGE
 
 <!-- QR -->
 
-<section class="section">
+<section class="section dark">
 
 <h2 class="section-title" id="qrTitle">
 YOUR BUSINESS. <span>ONE SCAN AWAY.</span>
@@ -689,7 +719,7 @@ Scan to visit ATHAR.
 
 <!-- SOCIAL -->
 
-<section class="section dark">
+<section class="section">
 
 <h2 class="section-title" id="socialTitle">
 CONNECT WITH <span>ATHAR</span>
@@ -732,7 +762,7 @@ target="_blank">💬 WhatsApp</a>
 
 <!-- CONTACT -->
 
-<section class="section" id="contact">
+<section class="section dark" id="contact">
 
 <h2 class="section-title" id="contactTitle">
 CREATE YOUR <span>SMART PAGE</span>
@@ -857,6 +887,12 @@ feature5Text:'All your important links in one place.',
 feature6Title:'QR CODE',
 feature6Text:'One scan gives access to your business.',
 
+workTitle:'OUR <span>WORK</span>',
+workDesc:'Explore some of our live digital projects and business demos.',
+work1Title:'NOVO Dental Clinic',
+work1Text:'Website Demo for Dental Clinics',
+work1Btn:'View Live Demo',
+
 howTitle:'HOW IT <span>WORKS</span>',
 
 howDesc:'Three simple steps.',
@@ -938,6 +974,12 @@ feature5Text:'كل حساباتك المهمة في مكان واحد.',
 
 feature6Title:'QR Code',
 feature6Text:'مسح واحد يفتح مشروعك.',
+
+workTitle:'أعمالنا',
+workDesc:'استعرض بعض مشاريعنا الرقمية ونماذج الأعمال الحية.',
+work1Title:'عيادة NOVO لأسنان',
+work1Text:'نموذج موقع مخصص لعيادات الأسنان',
+work1Btn:'عرض الموقع الحي',
 
 howTitle:'كيف <span>نعمل؟</span>',
 
@@ -1077,62 +1119,3 @@ function toggleLanguage(){
 
 /* ======================================
 WHATSAPP FORM
-====================================== */
-
-document.getElementById('contactForm').addEventListener('submit',function(e){
-
-    e.preventDefault();
-
-
-    const name =
-    document.getElementById('clientName').value;
-
-    const business =
-    document.getElementById('businessName').value;
-
-    const phone =
-    document.getElementById('phoneNumber').value;
-
-    const type =
-    document.getElementById('businessType').value;
-
-    const message =
-    document.getElementById('clientMessage').value;
-
-
-    const whatsappNumber =
-    '201289122717';
-
-
-    const text =
-
-    'Hello ATHAR!%0A%0A'+
-
-    'Name: '+name+'%0A'+
-
-    'Business: '+business+'%0A'+
-
-    'Phone: '+phone+'%0A'+
-
-    'Business Type: '+type+'%0A'+
-
-    'Message: '+message;
-
-
-    window.open(
-
-        'https://wa.me/'+
-        whatsappNumber+
-        '?text='+
-        encodeURIComponent(text),
-
-        '_blank'
-
-    );
-
-});
-
-</script>
-
-</body>
-</html>
