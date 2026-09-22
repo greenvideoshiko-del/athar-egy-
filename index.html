@@ -2,28 +2,20 @@
 <html lang="en" dir="ltr">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="ATHAR creates smart digital pages for businesses.">
+<meta name="description"
+content="ATHAR creates professional smart websites and digital pages for businesses.">
 
-<meta name="theme-color" content="#0b0b0b">
+<meta name="theme-color" content="#090909">
 
 <title>ATHAR | Leave Your Mark</title>
-
-<!-- Font Awesome Official Brand Icons -->
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-
 <style>
-
-/* =========================================
-RESET
-========================================= */
 
 *{
 margin:0;
@@ -37,1329 +29,1093 @@ scroll-behavior:smooth;
 
 :root{
 --gold:#d4af37;
---dark:#0b0b0b;
---dark2:#121212;
---card:#181818;
---gray:#aaaaaa;
+--gold-light:#f1d77b;
+--dark:#070707;
+--dark2:#0d0d0d;
+--card:#151515;
+--card2:#1b1b1b;
+--text:#f5f5f5;
+--muted:#9d9d9d;
 --border:#292929;
+--green:#25d366;
 }
 
 body{
-font-family:Arial,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 background:var(--dark);
-color:#ffffff;
+color:var(--text);
 line-height:1.6;
 overflow-x:hidden;
-transition:0.3s;
 }
 
 body.rtl{
 font-family:Tahoma,Arial,sans-serif;
+direction:rtl;
 }
 
 a{
 text-decoration:none;
+color:inherit;
 }
 
-img{
-max-width:100%;
+button,
+input,
+select,
+textarea{
+font-family:inherit;
 }
 
+.container{
+width:min(1150px,92%);
+margin:auto;
+}
 
-/* =========================================
+/* =========================
 NAVBAR
-========================================= */
+========================= */
 
 nav{
-
 position:sticky;
-
 top:0;
-
 z-index:1000;
-
+height:76px;
 display:flex;
-
-justify-content:space-between;
-
 align-items:center;
-
-padding:10px 7%;
-
-background:rgba(11,11,11,.97);
-
+justify-content:space-between;
+padding:0 5%;
+background:rgba(7,7,7,.94);
 border-bottom:1px solid var(--border);
+backdrop-filter:blur(15px);
+}
 
-backdrop-filter:blur(10px);
-
+.logo{
+display:flex;
+align-items:center;
 }
 
 .logo img{
-
 width:55px;
-
 height:55px;
-
 object-fit:contain;
-
 }
 
 .nav-links{
-
 display:flex;
-
 align-items:center;
-
-gap:20px;
-
+gap:24px;
 }
 
 .nav-links a{
-
-color:#cccccc;
-
 font-size:14px;
-
-transition:0.3s;
-
+font-weight:bold;
+color:#cfcfcf;
+transition:.3s;
 }
 
 .nav-links a:hover{
-
 color:var(--gold);
-
 }
 
 .language-btn{
-
-background:var(--gold);
-
-color:#111111;
-
 border:none;
-
+background:var(--gold);
+color:#111;
 padding:9px 18px;
-
 border-radius:7px;
-
 font-weight:bold;
-
 cursor:pointer;
-
-font-size:14px;
-
-transition:0.3s;
-
+transition:.3s;
 }
 
 .language-btn:hover{
-
-background:#ffffff;
-
+background:#fff;
 transform:translateY(-2px);
-
 }
 
-
-/* =========================================
+/* =========================
 HERO
-========================================= */
+========================= */
 
 .hero{
-
-min-height:90vh;
-
+min-height:calc(100vh - 76px);
 display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
 align-items:center;
-
+justify-content:center;
 text-align:center;
-
-padding:70px 20px;
-
+padding:80px 20px;
+position:relative;
+overflow:hidden;
 background:
-radial-gradient(
-circle at top,
-#302611,
-#15130d 40%,
-#0b0b0b 75%
-);
+radial-gradient(circle at 50% 0%,#302610 0%,#17140d 25%,#090909 65%);
+}
 
+.hero::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+border-radius:50%;
+background:rgba(212,175,55,.07);
+filter:blur(80px);
+top:-250px;
+left:50%;
+transform:translateX(-50%);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
 }
 
 .hero-logo{
-
-width:210px;
-
-margin-bottom:25px;
-
+width:180px;
+margin:0 auto 30px;
+filter:drop-shadow(0 15px 35px rgba(212,175,55,.15));
 }
 
 .hero h1{
-
-font-size:58px;
-
-max-width:900px;
-
-line-height:1.15;
-
+font-size:clamp(40px,6vw,68px);
+line-height:1.1;
+margin-bottom:22px;
+letter-spacing:-1px;
 }
 
 .gold{
-
 color:var(--gold);
-
 }
 
 .hero-sub{
-
-color:var(--gold);
-
 font-size:21px;
-
-margin:20px 0 10px;
-
+font-weight:bold;
+color:var(--gold-light);
+margin-bottom:15px;
 }
 
-.hero p{
-
-max-width:700px;
-
-color:var(--gray);
-
+.hero-description{
+max-width:730px;
+margin:0 auto 32px;
 font-size:17px;
-
-margin:0 auto 30px;
-
+color:var(--muted);
 }
 
 .hero-buttons{
-
 display:flex;
-
-gap:15px;
-
-flex-wrap:wrap;
-
 justify-content:center;
-
+gap:15px;
+flex-wrap:wrap;
 }
 
-
-/* =========================================
+/* =========================
 BUTTONS
-========================================= */
+========================= */
 
 .btn{
-
-display:inline-block;
-
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:9px;
 background:var(--gold);
-
-color:#111111;
-
-padding:15px 28px;
-
+color:#111;
+border:1px solid var(--gold);
+padding:14px 27px;
 border-radius:8px;
-
+font-size:14px;
 font-weight:bold;
-
-border:none;
-
 cursor:pointer;
-
-transition:0.3s;
-
-font-size:15px;
-
+transition:.3s;
 }
 
 .btn:hover{
-
+background:#fff;
+border-color:#fff;
 transform:translateY(-3px);
-
-background:#ffffff;
-
 }
 
 .btn-outline{
-
-display:inline-block;
-
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:9px;
 background:transparent;
-
 color:var(--gold);
-
-padding:14px 28px;
-
 border:1px solid var(--gold);
-
+padding:14px 27px;
 border-radius:8px;
-
+font-size:14px;
 font-weight:bold;
-
-transition:0.3s;
-
+transition:.3s;
 }
 
 .btn-outline:hover{
-
 background:var(--gold);
-
-color:#111111;
-
+color:#111;
+transform:translateY(-3px);
 }
 
-.btn-sm{
-
-padding:10px 20px;
-
-font-size:14px;
-
-margin-top:15px;
-
-}
-
-
-/* =========================================
+/* =========================
 SECTIONS
-========================================= */
+========================= */
 
 .section{
-
-padding:90px 8%;
-
-text-align:center;
-
+padding:90px 5%;
 }
 
-.dark{
-
+.section.dark{
 background:var(--dark2);
+}
 
+.section-heading{
+text-align:center;
+max-width:760px;
+margin:0 auto 50px;
 }
 
 .section-title{
-
-font-size:38px;
-
+font-size:clamp(30px,4vw,43px);
+line-height:1.2;
 margin-bottom:15px;
-
 }
 
 .section-title span{
-
 color:var(--gold);
-
 }
 
 .section-description{
-
-max-width:700px;
-
-margin:0 auto 45px;
-
-color:#999999;
-
+color:var(--muted);
+font-size:16px;
 }
 
-
-/* =========================================
-GRID
-========================================= */
+/* =========================
+CARDS
+========================= */
 
 .grid{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
+display:grid;
+grid-template-columns:repeat(3,1fr);
 gap:22px;
-
+max-width:1100px;
+margin:auto;
 }
 
-
-/* =========================================
-CARDS
-========================================= */
-
 .card{
-
-width:300px;
-
-padding:30px 25px;
-
-background:var(--card);
-
+background:linear-gradient(145deg,#181818,#111);
 border:1px solid var(--border);
-
-border-radius:15px;
-
-transition:0.3s;
-
+border-radius:16px;
+padding:32px 25px;
+transition:.3s;
 }
 
 .card:hover{
-
+transform:translateY(-7px);
 border-color:var(--gold);
-
-transform:translateY(-5px);
-
+box-shadow:0 18px 45px rgba(0,0,0,.35);
 }
 
 .icon{
-
-font-size:40px;
-
+font-size:38px;
 color:var(--gold);
-
-margin-bottom:15px;
-
+margin-bottom:18px;
 }
 
 .card h3{
-
-color:var(--gold);
-
+font-size:18px;
 margin-bottom:10px;
-
 }
 
 .card p{
-
-color:#aaaaaa;
-
+color:var(--muted);
+font-size:15px;
 }
 
+/* =========================
+WORK
+========================= */
 
-/* =========================================
+.work-card{
+text-align:center;
+max-width:450px;
+margin:auto;
+}
+
+.work-card .icon{
+font-size:45px;
+}
+
+/* =========================
 STEPS
-========================================= */
+========================= */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
 
 .step{
-
-width:260px;
-
+text-align:center;
+padding:20px;
 }
 
-.number{
-
+.step-number{
 width:65px;
-
 height:65px;
-
 margin:0 auto 20px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:var(--gold);
-
-color:#111111;
-
 border-radius:50%;
-
-font-size:24px;
-
+background:var(--gold);
+color:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
 font-weight:bold;
-
+box-shadow:0 8px 25px rgba(212,175,55,.15);
 }
 
+.step h3{
+margin-bottom:10px;
+}
 
-/* =========================================
+.step p{
+color:var(--muted);
+}
+
+/* =========================
 PACKAGE
-========================================= */
+========================= */
+
+.package-wrap{
+display:flex;
+justify-content:center;
+}
 
 .package{
-
-max-width:480px;
-
-margin:auto;
-
-padding:40px 30px;
-
-background:var(--card);
-
-border:2px solid var(--gold);
-
-border-radius:18px;
-
-}
-
-.badge{
-
-display:inline-block;
-
-padding:7px 16px;
-
-background:var(--gold);
-
-color:#111111;
-
-border-radius:20px;
-
-font-size:13px;
-
-font-weight:bold;
-
-}
-
-.price{
-
-font-size:42px;
-
-font-weight:bold;
-
-margin:20px 0;
-
-}
-
-.package ul{
-
-list-style:none;
-
-text-align:left;
-
-margin:25px 0;
-
-}
-
-body.rtl .package ul{
-
-text-align:right;
-
-}
-
-.package li{
-
-padding:12px;
-
-border-bottom:1px solid #303030;
-
-color:#bbbbbb;
-
-}
-
-.package li::before{
-
-content:"✓ ";
-
-color:var(--gold);
-
-font-weight:bold;
-
-}
-
-
-/* =========================================
-QR CODE
-========================================= */
-
-.qr-box{
-
-max-width:600px;
-
-margin:auto;
-
-padding:35px;
-
-background:var(--card);
-
+width:100%;
+max-width:520px;
+background:linear-gradient(145deg,#1b1b1b,#101010);
 border:1px solid var(--gold);
-
-border-radius:18px;
-
+border-radius:20px;
+padding:40px 32px;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,.35);
 }
 
-.qr-box img{
+.package-badge{
+display:inline-block;
+background:var(--gold);
+color:#111;
+padding:7px 17px;
+border-radius:30px;
+font-size:12px;
+font-weight:bold;
+}
 
+.package h3{
+font-size:27px;
+margin-top:20px;
+}
+
+.package-price{
+font-size:42px;
+font-weight:bold;
+color:var(--gold);
+margin:15px 0 25px;
+}
+
+.package-list{
+list-style:none;
+text-align:left;
+margin-bottom:28px;
+}
+
+body.rtl .package-list{
+text-align:right;
+}
+
+.package-list li{
+padding:11px 0;
+border-bottom:1px solid #2b2b2b;
+color:#c4c4c4;
+}
+
+.package-list li i{
+color:var(--gold);
+margin-right:8px;
+}
+
+body.rtl .package-list li i{
+margin-right:0;
+margin-left:8px;
+}
+
+/* =========================
+QR
+========================= */
+
+.qr-container{
+max-width:650px;
+margin:auto;
+text-align:center;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:20px;
+padding:35px;
+}
+
+.qr-container img{
 width:220px;
-
-background:#ffffff;
-
+height:220px;
+background:#fff;
 padding:10px;
-
-border-radius:10px;
-
-margin:20px;
-
+border-radius:12px;
+margin:25px auto;
 }
 
-
-/* =========================================
-SOCIAL MEDIA
-========================================= */
+/* =========================
+SOCIAL
+========================= */
 
 .social-grid{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
+display:grid;
+grid-template-columns:repeat(3,1fr);
 gap:15px;
-
+max-width:900px;
+margin:auto;
 }
 
 .social{
-
-width:210px;
-
-padding:17px;
-
-background:var(--card);
-
-color:#ffffff;
-
-border:1px solid #303030;
-
-border-radius:10px;
-
-transition:0.3s;
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 gap:10px;
-
-font-size:16px;
-
+background:var(--card);
+border:1px solid var(--border);
+padding:17px;
+border-radius:10px;
 font-weight:bold;
-
+transition:.3s;
 }
 
 .social i{
-
-font-size:22px;
-
+font-size:21px;
 }
 
 .social:hover{
-
 border-color:var(--gold);
-
 color:var(--gold);
-
 transform:translateY(-3px);
-
 }
 
+/* =========================
+CONTACT
+========================= */
 
-/* Official Brand Colors */
-
-.facebook:hover i{
-
-color:#1877f2;
-
+.contact-section{
+background:
+radial-gradient(circle at 50% 100%,#241d0c 0%,#0d0d0d 45%);
 }
 
-.instagram:hover i{
-
-color:#e4405f;
-
+.contact-wrapper{
+max-width:1050px;
+margin:auto;
+display:grid;
+grid-template-columns:.9fr 1.4fr;
+gap:25px;
 }
 
-.tiktok:hover i{
-
-color:#ffffff;
-
+.contact-info,
+.contact-form{
+background:rgba(20,20,20,.95);
+border:1px solid var(--border);
+border-radius:18px;
+padding:32px;
 }
 
-.snapchat:hover i{
-
-color:#fffc00;
-
+.contact-info h3,
+.form-title{
+color:var(--gold);
+font-size:21px;
+margin-bottom:15px;
 }
 
-.behance:hover i{
-
-color:#1769ff;
-
+.contact-info > p{
+color:var(--muted);
+margin-bottom:25px;
 }
 
-.whatsapp-social:hover i{
-
-color:#25d366;
-
+.contact-item{
+display:flex;
+align-items:center;
+gap:13px;
+padding:13px 0;
+border-bottom:1px solid #292929;
+color:#ddd;
 }
 
-
-/* =========================================
-FORM
-========================================= */
+.contact-item i{
+color:var(--gold);
+font-size:19px;
+width:25px;
+text-align:center;
+}
 
 .contact-form{
+text-align:left;
+}
 
-max-width:600px;
+body.rtl .contact-form{
+text-align:right;
+}
 
-margin:auto;
-
+.form-title{
+margin-bottom:20px;
 }
 
 input,
 select,
 textarea{
-
 width:100%;
-
-padding:16px;
-
-margin-bottom:15px;
-
-background:#181818;
-
-color:#ffffff;
-
-border:1px solid #333333;
-
-border-radius:8px;
-
-font-size:16px;
-
-font-family:inherit;
-
-}
-
-textarea{
-
-height:130px;
-
-resize:vertical;
-
+padding:14px 15px;
+margin-bottom:14px;
+background:#0c0c0c;
+border:1px solid #303030;
+border-radius:9px;
+color:#fff;
+font-size:15px;
+outline:none;
+transition:.3s;
 }
 
 input:focus,
 select:focus,
 textarea:focus{
-
-outline:none;
-
 border-color:var(--gold);
-
+box-shadow:0 0 0 2px rgba(212,175,55,.08);
 }
 
+select{
+cursor:pointer;
+}
 
-/* =========================================
-FLOATING WHATSAPP
-========================================= */
+textarea{
+height:125px;
+resize:vertical;
+}
+
+.submit-btn{
+width:100%;
+}
+
+.form-status{
+min-height:24px;
+margin-top:13px;
+font-size:14px;
+text-align:center;
+color:var(--muted);
+}
+
+/* =========================
+WHATSAPP
+========================= */
 
 .whatsapp{
-
 position:fixed;
-
 right:20px;
-
 bottom:20px;
-
-width:60px;
-
-height:60px;
-
-background:#25d366;
-
-color:#ffffff;
-
-border-radius:50%;
-
+width:58px;
+height:58px;
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
-font-size:30px;
-
+background:var(--green);
+color:#fff;
+border-radius:50%;
+font-size:29px;
 z-index:2000;
-
-box-shadow:0 5px 20px rgba(0,0,0,.4);
-
-transition:0.3s;
-
+box-shadow:0 7px 25px rgba(0,0,0,.4);
+transition:.3s;
 }
 
 .whatsapp:hover{
-
 transform:scale(1.1);
-
-color:#ffffff;
-
 }
 
+/* =========================
+BACK TOP
+========================= */
 
-/* =========================================
-BACK TO TOP
-========================================= */
-
-.top{
-
+.top-btn{
 position:fixed;
-
 left:20px;
-
 bottom:20px;
-
 width:48px;
-
 height:48px;
-
-background:#222222;
-
-color:var(--gold);
-
-border:1px solid #444444;
-
-border-radius:50%;
-
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
+background:#1b1b1b;
+border:1px solid #333;
+color:var(--gold);
+border-radius:50%;
 z-index:2000;
-
-font-size:22px;
-
-transition:0.3s;
-
+cursor:pointer;
+transition:.3s;
 }
 
-.top:hover{
-
+.top-btn:hover{
 background:var(--gold);
-
-color:#111111;
-
+color:#111;
 }
 
-
-/* =========================================
+/* =========================
 FOOTER
-========================================= */
+========================= */
 
 footer{
-
 background:#050505;
-
-text-align:center;
-
 padding:45px 20px;
-
-color:#777777;
-
+text-align:center;
+border-top:1px solid #181818;
 }
 
 footer h2{
-
 color:var(--gold);
-
 letter-spacing:7px;
-
-margin-bottom:12px;
-
+margin-bottom:10px;
 }
 
+footer p{
+color:#666;
+font-size:14px;
+max-width:650px;
+margin:auto;
+}
 
-/* =========================================
+/* =========================
 RTL
-========================================= */
-
-body.rtl{
-
-direction:rtl;
-
-}
+========================= */
 
 body.rtl nav{
-
 flex-direction:row-reverse;
-
 }
 
-body.rtl .contact-form{
+body.rtl .contact-item{
+flex-direction:row-reverse;
+}
 
+body.rtl .contact-info{
 text-align:right;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:850px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.steps{
+grid-template-columns:1fr;
+max-width:500px;
+}
+
+.contact-wrapper{
+grid-template-columns:1fr;
+}
+
+.social-grid{
+grid-template-columns:repeat(2,1fr);
+}
 
 }
 
-
-/* =========================================
-MOBILE
-========================================= */
-
-@media(max-width:750px){
+@media(max-width:600px){
 
 nav{
+height:70px;
+padding:0 18px;
+}
 
-padding:10px 20px;
+.logo img{
+width:50px;
+height:50px;
+}
 
+.nav-links{
+gap:8px;
 }
 
 .nav-links a{
-
 display:none;
-
 }
 
-.hero h1{
+.language-btn{
+padding:8px 14px;
+}
 
-font-size:38px;
+.hero{
+min-height:calc(100vh - 70px);
+padding:65px 20px;
+}
 
+.hero-logo{
+width:145px;
 }
 
 .hero-sub{
-
-font-size:18px;
-
+font-size:17px;
 }
 
-.section{
-
-padding:65px 20px;
-
-}
-
-.section-title{
-
-font-size:30px;
-
-}
-
-.card,
-.step,
-.social{
-
-width:100%;
-
-max-width:350px;
-
+.hero-description{
+font-size:15px;
 }
 
 .hero-buttons{
-
 flex-direction:column;
-
 width:100%;
-
 max-width:320px;
-
+margin:auto;
 }
 
-.hero-buttons a{
-
+.hero-buttons .btn,
+.hero-buttons .btn-outline{
 width:100%;
+}
 
+.section{
+padding:65px 20px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.social-grid{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:27px 22px;
+}
+
+.package{
+padding:32px 22px;
+}
+
+.qr-container{
+padding:25px 15px;
+}
+
+.contact-info,
+.contact-form{
+padding:25px 20px;
+}
+
+.whatsapp{
+right:15px;
+bottom:15px;
+}
+
+.top-btn{
+left:15px;
+bottom:15px;
 }
 
 }
 
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- =========================================
-NAVBAR
-========================================= -->
 
 <nav>
 
 <div class="logo">
-
 <img
 src="file_00000000031c8210bc841a03c3660fad.png"
 alt="ATHAR Logo">
-
 </div>
-
 
 <div class="nav-links">
 
 <a href="#features"
-data-en="Features"
-data-ar="المميزات">
-Features
-</a>
+data-en="Services"
+data-ar="الخدمات">Services</a>
 
 <a href="#work"
 data-en="Our Work"
-data-ar="أعمالنا">
-Our Work
-</a>
+data-ar="أعمالنا">Our Work</a>
 
 <a href="#how"
 data-en="How It Works"
-data-ar="كيف نعمل">
-How It Works
-</a>
+data-ar="كيف نعمل">How It Works</a>
 
 <a href="#package"
 data-en="Smart Page"
-data-ar="الصفحة الذكية">
-Smart Page
-</a>
+data-ar="الصفحة الذكية">Smart Page</a>
 
 <a href="#contact"
 data-en="Contact"
-data-ar="تواصل">
-Contact
-</a>
-
+data-ar="تواصل معنا">Contact</a>
 
 <button
 type="button"
 class="language-btn"
 id="languageBtn">
-
 عربي
-
 </button>
 
 </div>
 
 </nav>
 
-
-
-<!-- =========================================
-HERO
-========================================= -->
-
 <section class="hero">
+
+<div class="hero-content">
 
 <img
 src="file_00000000031c8210bc841a03c3660fad.png"
 class="hero-logo"
 alt="ATHAR">
 
-
 <h1
 data-en='Your Business Deserves To <span class="gold">Leave A Mark.</span>'
 data-ar='مشروعك يستحق أن <span class="gold">يترك أثرًا.</span>'>
 
 Your Business Deserves To
-<span class="gold">
-Leave A Mark.
-</span>
+<span class="gold">Leave A Mark.</span>
 
 </h1>
 
-
 <div
 class="hero-sub"
-data-en="Everything your customers need. One smart link."
-data-ar="كل ما يحتاجه عملاؤك في رابط ذكي واحد.">
+data-en="Your business. Your services. One smart digital presence."
+data-ar="مشروعك. خدماتك. حضور رقمي ذكي في مكان واحد.">
 
-Everything your customers need. One smart link.
+Your business. Your services. One smart digital presence.
 
 </div>
 
-
 <p
-data-en="ATHAR creates smart digital pages that bring your business, services, contact information and social media together in one place."
-data-ar="أثر تنشئ صفحات رقمية ذكية تجمع معلومات مشروعك وخدماتك وطرق التواصل وحسابات السوشيال ميديا في مكان واحد.">
+class="hero-description"
+data-en="ATHAR creates professional digital pages and websites that help businesses present their services, connect with customers and build a stronger online presence."
+data-ar="أثر تنشئ صفحات ومواقع رقمية احترافية تساعد مشروعك على عرض خدماته والتواصل مع عملائه وبناء حضور أقوى على الإنترنت.">
 
-ATHAR creates smart digital pages that bring your business,
-services, contact information and social media together in one place.
+ATHAR creates professional digital pages and websites that help businesses present their services, connect with customers and build a stronger online presence.
 
 </p>
-
 
 <div class="hero-buttons">
 
 <a
 href="#package"
 class="btn"
-data-en="CREATE YOUR SMART PAGE"
-data-ar="أنشئ صفحتك الذكية">
+data-en="GET YOUR WEBSITE"
+data-ar="احصل على موقعك">
 
-CREATE YOUR SMART PAGE
+GET YOUR WEBSITE
 
 </a>
 
-
 <a
-href="https://wa.me/201289122717"
-target="_blank"
+href="#work"
 class="btn-outline"
-data-en="CHAT WITH US"
-data-ar="تحدث معنا">
+data-en="VIEW OUR WORK"
+data-ar="شاهد أعمالنا">
 
-CHAT WITH US
+VIEW OUR WORK
 
 </a>
 
 </div>
 
+</div>
+
 </section>
-
-
-
-<!-- =========================================
-FEATURES
-========================================= -->
-
 <section
 class="section dark"
 id="features">
 
+<div class="section-heading">
 
 <h2
 class="section-title"
-data-en='WHAT'S INSIDE YOUR <span>SMART PAGE?</span>'
-data-ar='ماذا تحتوي <span>صفحتك الذكية؟</span>'>
+data-en='WHAT WE <span>BUILD</span>'
+data-ar='ماذا <span>نقدم؟</span>'>
 
-WHAT'S INSIDE YOUR
-<span>SMART PAGE?</span>
+WHAT WE <span>BUILD</span>
 
 </h2>
 
-
 <p
 class="section-description"
-data-en="Everything your customer needs in one professional link."
-data-ar="كل ما يحتاجه العميل في رابط احترافي واحد.">
+data-en="Professional digital solutions designed around your business."
+data-ar="حلول رقمية احترافية مصممة حول احتياجات مشروعك.">
 
-Everything your customer needs in one professional link.
+Professional digital solutions designed around your business.
 
 </p>
 
+</div>
 
 <div class="grid">
 
-
 <div class="card">
-
 <div class="icon">
-
 <i class="fa-solid fa-globe"></i>
-
 </div>
 
 <h3
-data-en="DIGITAL PAGE"
-data-ar="صفحة رقمية">
-
-DIGITAL PAGE
-
+data-en="BUSINESS WEBSITE"
+data-ar="موقع احترافي لمشروعك">
+BUSINESS WEBSITE
 </h3>
 
 <p
-data-en="A professional page designed for your business."
-data-ar="صفحة احترافية مصممة لمشروعك.">
-
-A professional page designed for your business.
-
+data-en="A modern website that presents your business professionally and clearly."
+data-ar="موقع حديث يعرض مشروعك وخدماتك بصورة احترافية وواضحة.">
+A modern website that presents your business professionally and clearly.
 </p>
-
 </div>
 
 
+<div class="card">
+<div class="icon">
+<i class="fa-solid fa-mobile-screen-button"></i>
+</div>
+
+<h3
+data-en="MOBILE FRIENDLY"
+data-ar="متوافق مع الهاتف">
+MOBILE FRIENDLY
+</h3>
+
+<p
+data-en="Your website is designed to work beautifully on phones, tablets and computers."
+data-ar="موقعك مصمم ليعمل بشكل ممتاز على الهاتف والتابلت والكمبيوتر.">
+Your website is designed to work beautifully on phones, tablets and computers.
+</p>
+</div>
+
 
 <div class="card">
-
 <div class="icon">
-
 <i class="fa-brands fa-whatsapp"></i>
-
 </div>
 
 <h3
-data-en="DIRECT WHATSAPP"
-data-ar="واتساب مباشر">
-
-DIRECT WHATSAPP
-
+data-en="WHATSAPP CONTACT"
+data-ar="تواصل مباشر عبر واتساب">
+WHATSAPP CONTACT
 </h3>
 
 <p
-data-en="Customers contact you instantly with one click."
-data-ar="يتواصل العميل معك فورًا بضغطة واحدة.">
-
-Customers contact you instantly with one click.
-
+data-en="Customers can contact your business directly with one simple click."
+data-ar="يمكن لعملائك التواصل مع مشروعك مباشرة بضغطة واحدة.">
+Customers can contact your business directly with one simple click.
 </p>
-
 </div>
 
 
-
 <div class="card">
-
 <div class="icon">
-
 <i class="fa-solid fa-location-dot"></i>
-
 </div>
 
 <h3
-data-en="LOCATION"
-data-ar="موقع المشروع">
-
-LOCATION
-
+data-en="GOOGLE MAPS"
+data-ar="موقع مشروعك على الخريطة">
+GOOGLE MAPS
 </h3>
 
 <p
-data-en="Help customers find your business easily."
-data-ar="ساعد العملاء في الوصول إليك بسهولة.">
-
-Help customers find your business easily.
-
+data-en="Make it easier for customers to find and visit your business."
+data-ar="اجعل الوصول إلى مشروعك أسهل لعملائك.">
+Make it easier for customers to find and visit your business.
 </p>
-
 </div>
 
 
-
 <div class="card">
-
 <div class="icon">
-
 <i class="fa-solid fa-images"></i>
-
 </div>
 
 <h3
-data-en="PHOTOS & SERVICES"
-data-ar="الصور والخدمات">
-
-PHOTOS & SERVICES
-
+data-en="SERVICES & PHOTOS"
+data-ar="الخدمات والصور">
+SERVICES & PHOTOS
 </h3>
 
 <p
-data-en="Show your services and best work."
-data-ar="اعرض خدماتك وأفضل أعمالك.">
-
-Show your services and best work.
-
+data-en="Show your services, products, photos and best work in one place."
+data-ar="اعرض خدماتك ومنتجاتك وصورك وأفضل أعمالك في مكان واحد.">
+Show your services, products, photos and best work in one place.
 </p>
-
 </div>
-
 
 
 <div class="card">
-
 <div class="icon">
-
-<i class="fa-solid fa-link"></i>
-
-</div>
-
-<h3
-data-en="SOCIAL LINKS"
-data-ar="روابط السوشيال">
-
-SOCIAL LINKS
-
-</h3>
-
-<p
-data-en="All your important links in one place."
-data-ar="كل حساباتك المهمة في مكان واحد.">
-
-All your important links in one place.
-
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="icon">
-
 <i class="fa-solid fa-qrcode"></i>
-
 </div>
 
 <h3
-data-en="QR CODE"
-data-ar="رمز QR">
-
-QR CODE
-
+data-en="CUSTOM QR CODE"
+data-ar="رمز QR مخصص">
+CUSTOM QR CODE
 </h3>
 
 <p
-data-en="One scan gives access to your business."
-data-ar="مسح واحد يفتح مشروعك.">
-
-One scan gives access to your business.
-
+data-en="Give customers a fast and simple way to access your digital presence."
+data-ar="امنح عملاءك طريقة سريعة وسهلة للوصول إلى حضورك الرقمي.">
+Give customers a fast and simple way to access your digital presence.
 </p>
-
 </div>
-
 
 </div>
 
 </section>
 
-
-
-<!-- =========================================
-OUR WORK
-========================================= -->
 
 <section
 class="section"
 id="work">
 
+<div class="section-heading">
 
 <h2
 class="section-title"
 data-en='OUR <span>WORK</span>'
-data-ar='أعمالنا'>
+data-ar='<span>أعمالنا</span>'>
 
-OUR
-<span>WORK</span>
+OUR <span>WORK</span>
 
 </h2>
 
-
 <p
 class="section-description"
-data-en="Explore some of our live digital projects and business demos."
-data-ar="استعرض بعض مشاريعنا الرقمية ونماذج الأعمال الحية.">
+data-en="Explore our digital projects and business website demos."
+data-ar="استعرض مشاريعنا الرقمية ونماذج مواقع الأعمال.">
 
-Explore some of our live digital projects and business demos.
+Explore our digital projects and business website demos.
 
 </p>
 
+</div>
 
 <div class="grid">
 
-
-<div
-class="card"
-style="max-width:380px;width:100%;">
+<div class="card work-card">
 
 <div class="icon">
-
 <i class="fa-solid fa-tooth"></i>
-
 </div>
-
 
 <h3
 data-en="NOVO Dental Clinic"
@@ -1369,74 +1125,113 @@ NOVO Dental Clinic
 
 </h3>
 
-
 <p
-style="margin-bottom:20px;"
-data-en="Website Demo for Dental Clinics"
-data-ar="نموذج موقع مخصص لعيادات الأسنان">
+data-en="A modern bilingual website designed for a dental clinic."
+data-ar="موقع حديث ثنائي اللغة مصمم لعيادة أسنان.">
 
-Website Demo for Dental Clinics
+A modern bilingual website designed for a dental clinic.
 
 </p>
 
+<br>
 
 <a
 href="https://greenvideoshiko-del.github.io/novo-dental/"
 target="_blank"
-class="btn btn-sm"
-data-en="View Live Demo"
-data-ar="عرض الموقع الحي">
+rel="noopener"
+class="btn">
 
-View Live Demo
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+<span
+data-en="VIEW LIVE DEMO"
+data-ar="عرض الموقع">
+
+VIEW LIVE DEMO
+
+</span>
 
 </a>
 
-
 </div>
 
+
+<div class="card work-card">
+
+<div class="icon">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+
+<h3
+data-en="YOUR BUSINESS"
+data-ar="مشروعك">
+
+YOUR BUSINESS
+
+</h3>
+
+<p
+data-en="Your business could be our next digital project. Let's build something designed around your brand."
+data-ar="مشروعك يمكن أن يكون مشروعنا الرقمي القادم. لنصمم لك حضورًا رقميًا يناسب علامتك.">
+
+Your business could be our next digital project. Let's build something designed around your brand.
+
+</p>
+
+<br>
+
+<a
+href="#contact"
+class="btn">
+
+<span
+data-en="START YOUR PROJECT"
+data-ar="ابدأ مشروعك">
+
+START YOUR PROJECT
+
+</span>
+
+</a>
+
+</div>
 
 </div>
 
 </section>
 
 
-
-<!-- =========================================
-HOW IT WORKS
-========================================= -->
-
 <section
 class="section dark"
 id="how">
 
+<div class="section-heading">
 
 <h2
 class="section-title"
 data-en='HOW IT <span>WORKS</span>'
 data-ar='كيف <span>نعمل؟</span>'>
 
-HOW IT
-<span>WORKS</span>
+HOW IT <span>WORKS</span>
 
 </h2>
 
-
 <p
 class="section-description"
-data-en="Three simple steps."
-data-ar="ثلاث خطوات بسيطة.">
+data-en="A simple process from your idea to your online presence."
+data-ar="خطوات بسيطة من فكرتك حتى ظهور مشروعك على الإنترنت.">
 
-Three simple steps.
+A simple process from your idea to your online presence.
 
 </p>
 
+</div>
 
-<div class="grid">
-
+<div class="steps">
 
 <div class="step">
 
-<div class="number">1</div>
+<div class="step-number">1</div>
 
 <h3
 data-en="TELL US"
@@ -1447,20 +1242,19 @@ TELL US
 </h3>
 
 <p
-data-en="Tell us about your business."
-data-ar="أخبرنا عن مشروعك.">
+data-en="Tell us about your business, services and what you need."
+data-ar="أخبرنا عن مشروعك وخدماتك وما تحتاج إليه.">
 
-Tell us about your business.
+Tell us about your business, services and what you need.
 
 </p>
 
 </div>
 
 
-
 <div class="step">
 
-<div class="number">2</div>
+<div class="step-number">2</div>
 
 <h3
 data-en="WE BUILD"
@@ -1471,253 +1265,210 @@ WE BUILD
 </h3>
 
 <p
-data-en="We create your Smart Page."
-data-ar="نقوم بإنشاء صفحتك الذكية.">
+data-en="We design and build a professional digital presence around your business."
+data-ar="نصمم ونبني حضورًا رقميًا احترافيًا يناسب مشروعك.">
 
-We create your Smart Page.
+We design and build a professional digital presence around your business.
 
 </p>
 
 </div>
-
 
 
 <div class="step">
 
-<div class="number">3</div>
+<div class="step-number">3</div>
 
 <h3
-data-en="YOU SHARE"
-data-ar="أنت تشارك">
+data-en="YOU GO LIVE"
+data-ar="تظهر على الإنترنت">
 
-YOU SHARE
+YOU GO LIVE
 
 </h3>
 
 <p
-data-en="Share your link with customers."
-data-ar="شارك رابطك مع العملاء.">
+data-en="Your new digital page is ready to share with your customers."
+data-ar="صفحتك الرقمية الجديدة تصبح جاهزة للمشاركة مع عملائك.">
 
-Share your link with customers.
+Your new digital page is ready to share with your customers.
 
 </p>
 
 </div>
-
 
 </div>
 
 </section>
 
-
-
-<!-- =========================================
-PACKAGE
-========================================= -->
 
 <section
 class="section"
 id="package">
 
+<div class="section-heading">
 
 <h2
 class="section-title"
-data-en='ATHAR <span>SMART PAGE</span>'
-data-ar='صفحة <span>ATHAR الذكية</span>'>
+data-en='THE <span>SMART PAGE</span>'
+data-ar='<span>الصفحة الذكية</span>'>
 
-ATHAR
-<span>SMART PAGE</span>
+THE <span>SMART PAGE</span>
 
 </h2>
-
 
 <p
 class="section-description"
-data-en="Everything your business needs online."
-data-ar="كل ما يحتاجه مشروعك على الإنترنت.">
+data-en="Everything your customer needs to discover and contact your business."
+data-ar="كل ما يحتاجه عميلك للتعرف على مشروعك والتواصل معك.">
 
-Everything your business needs online.
+Everything your customer needs to discover and contact your business.
 
 </p>
 
+</div>
+
+<div class="package-wrap">
 
 <div class="package">
 
+<div class="package-badge"
+data-en="ATHAR DIGITAL">
+ATHAR DIGITAL
+</div>
 
-<div
-class="badge"
-data-en="LAUNCH OFFER"
-data-ar="عرض الإطلاق">
+<h3
+data-en="Smart Business Page"
+data-ar="صفحة الأعمال الذكية">
 
-LAUNCH OFFER
+Smart Business Page
+
+</h3>
+
+<div class="package-price"
+data-en="CUSTOM"
+data-ar="حسب احتياج مشروعك">
+
+CUSTOM
 
 </div>
 
+<ul class="package-list">
 
-<h2
-data-en="ATHAR SMART PAGE"
-data-ar="صفحة ATHAR الذكية">
-
-ATHAR SMART PAGE
-
-</h2>
-
-
-<div class="price">
-
-500 EGP
-
-</div>
-
-
-<ul>
-
-
-<li
-data-en="Professional Digital Page"
-data-ar="صفحة رقمية احترافية">
-
-Professional Digital Page
-
+<li>
+<i class="fa-solid fa-check"></i>
+<span
+data-en="Professional business design"
+data-ar="تصميم احترافي لمشروعك">
+Professional business design
+</span>
 </li>
 
-
-<li
-data-en="Mobile Friendly Design"
-data-ar="تصميم متوافق مع الهاتف">
-
-Mobile Friendly Design
-
+<li>
+<i class="fa-solid fa-check"></i>
+<span
+data-en="Mobile-friendly experience"
+data-ar="متوافق مع جميع الشاشات">
+Mobile-friendly experience
+</span>
 </li>
 
-
-<li
-data-en="Services & Information"
-data-ar="الخدمات والمعلومات">
-
-Services & Information
-
+<li>
+<i class="fa-solid fa-check"></i>
+<span
+data-en="Services and business information"
+data-ar="عرض الخدمات ومعلومات المشروع">
+Services and business information
+</span>
 </li>
 
-
-<li
-data-en="Business Photos"
-data-ar="صور المشروع">
-
-Business Photos
-
+<li>
+<i class="fa-solid fa-check"></i>
+<span
+data-en="Direct WhatsApp contact"
+data-ar="تواصل مباشر عبر واتساب">
+Direct WhatsApp contact
+</span>
 </li>
 
-
-<li
-data-en="Direct WhatsApp Button"
-data-ar="زر واتساب مباشر">
-
-Direct WhatsApp Button
-
+<li>
+<i class="fa-solid fa-check"></i>
+<span
+data-en="Google Maps integration"
+data-ar="ربط الموقع بخرائط Google">
+Google Maps integration
+</span>
 </li>
 
-
-<li
-data-en="Google Maps Location"
-data-ar="إضافة موقع Google Maps">
-
-Google Maps Location
-
-</li>
-
-
-<li
-data-en="Social Media Links"
-data-ar="روابط السوشيال ميديا">
-
-Social Media Links
-
-</li>
-
-
-<li
+<li>
+<i class="fa-solid fa-check"></i>
+<span
 data-en="Custom QR Code"
 data-ar="رمز QR مخصص">
-
 Custom QR Code
-
+</span>
 </li>
-
-
-<li
-data-en="Arabic / English"
-data-ar="اللغة العربية والإنجليزية">
-
-Arabic / English
-
-</li>
-
 
 </ul>
 
-
 <a
 href="#contact"
-class="btn"
-data-en="GET YOUR SMART PAGE"
-data-ar="احصل على صفحتك الذكية">
+class="btn">
 
-GET YOUR SMART PAGE
+<span
+data-en="REQUEST YOUR PAGE"
+data-ar="اطلب صفحتك الآن">
+
+REQUEST YOUR PAGE
+
+</span>
 
 </a>
 
+</div>
 
 </div>
 
 </section>
 
 
-
-<!-- =========================================
-QR CODE
-========================================= -->
-
 <section class="section dark">
 
+<div class="section-heading">
 
 <h2
 class="section-title"
 data-en='YOUR BUSINESS. <span>ONE SCAN AWAY.</span>'
 data-ar='مشروعك على بعد <span>مسح واحد.</span>'>
 
-YOUR BUSINESS.
-<span>ONE SCAN AWAY.</span>
+YOUR BUSINESS. <span>ONE SCAN AWAY.</span>
 
 </h2>
 
-
 <p
 class="section-description"
-data-en="Share your business instantly using a QR Code."
-data-ar="شارك مشروعك فورًا باستخدام رمز QR.">
+data-en="Share your business instantly with a custom QR Code."
+data-ar="شارك مشروعك فورًا باستخدام رمز QR مخصص.">
 
-Share your business instantly using a QR Code.
+Share your business instantly with a custom QR Code.
 
 </p>
 
+</div>
 
-<div class="qr-box">
+<div class="qr-container">
 
-
-<h2
+<h3
 data-en="SCAN. CONNECT. EXPLORE."
 data-ar="امسح. تواصل. اكتشف.">
 
 SCAN. CONNECT. EXPLORE.
 
-</h2>
-
+</h3>
 
 <img
 src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://greenvideoshiko-del.github.io/athar-egy-/"
 alt="ATHAR QR Code">
-
 
 <p
 data-en="Scan to visit ATHAR."
@@ -1727,191 +1478,273 @@ Scan to visit ATHAR.
 
 </p>
 
-
 </div>
 
 </section>
 
 
-
-<!-- =========================================
-SOCIAL MEDIA
-========================================= -->
-
 <section class="section">
 
+<div class="section-heading">
 
 <h2
 class="section-title"
 data-en='CONNECT WITH <span>ATHAR</span>'
 data-ar='تواصل مع <span>ATHAR</span>'>
 
-CONNECT WITH
-<span>ATHAR</span>
+CONNECT WITH <span>ATHAR</span>
 
 </h2>
 
-
 <p
 class="section-description"
-data-en="Follow our journey and contact us."
-data-ar="تابع رحلتنا وتواصل معنا.">
+data-en="Follow ATHAR and discover our latest digital work."
+data-ar="تابع ATHAR واكتشف أحدث أعمالنا الرقمية.">
 
-Follow our journey and contact us.
+Follow ATHAR and discover our latest digital work.
 
 </p>
 
+</div>
 
 <div class="social-grid">
 
-
-<!-- FACEBOOK -->
-
 <a
-class="social facebook"
+class="social"
 href="https://www.facebook.com/share/1Ly8tnh3YQ/"
 target="_blank"
 rel="noopener">
 
 <i class="fa-brands fa-facebook-f"></i>
-
 <span>Facebook</span>
 
 </a>
 
 
-<!-- INSTAGRAM -->
-
 <a
-class="social instagram"
+class="social"
 href="https://www.instagram.com/your.informa?stkn=MXV4YmswamF3b3ZqZA=="
 target="_blank"
 rel="noopener">
 
 <i class="fa-brands fa-instagram"></i>
-
 <span>Instagram</span>
 
 </a>
 
 
-<!-- TIKTOK -->
-
 <a
-class="social tiktok"
+class="social"
 href="https://vm.tiktok.com/ZS9SDXxM8TpD5-Sg0AX/"
 target="_blank"
 rel="noopener">
 
 <i class="fa-brands fa-tiktok"></i>
-
 <span>TikTok</span>
 
 </a>
 
 
-<!-- SNAPCHAT -->
-
 <a
-class="social snapchat"
+class="social"
 href="https://www.snapchat.com/add/greenshikoo?share_id=SSaJJq7rJ_k&locale=ar-EG"
 target="_blank"
 rel="noopener">
 
 <i class="fa-brands fa-snapchat"></i>
-
 <span>Snapchat</span>
 
 </a>
 
 
-<!-- BEHANCE -->
-
 <a
-class="social behance"
+class="social"
 href="https://www.behance.net/sherifmamdouh5"
 target="_blank"
 rel="noopener">
 
 <i class="fa-brands fa-behance"></i>
-
 <span>Behance</span>
 
 </a>
 
 
-<!-- WHATSAPP -->
-
 <a
-class="social whatsapp-social"
+class="social"
 href="https://wa.me/201289122717"
 target="_blank"
 rel="noopener">
 
 <i class="fa-brands fa-whatsapp"></i>
-
 <span>WhatsApp</span>
 
 </a>
 
-
 </div>
 
 </section>
+<section
+class="section contact-section"
+id="contact">
 
+<div class="section-heading">
 
+<h2
+class="section-title"
+data-en='LET’S <span>TALK</span>'
+data-ar='تحدث <span>معنا</span>'>
 
-<!-- =========================================
-CONTACT
-========================================= -->
-
-<section class="section dark" id="contact">
-
-<h2 class="section-title"
-data-en='CREATE YOUR <span>SMART PAGE</span>'
-data-ar='أنشئ <span>صفحتك الذكية</span>'>
-
-CREATE YOUR <span>SMART PAGE</span>
+LET’S <span>TALK</span>
 
 </h2>
 
-<p class="section-description"
-data-en="Tell us about your business and we will contact you."
-data-ar="أخبرنا عن مشروعك وسنتواصل معك.">
+<p
+class="section-description"
+data-en="Tell us about your business and what you want to build. We’ll get back to you with the next step."
+data-ar="أخبرنا عن مشروعك وما تريد بناءه، وسنتواصل معك لمعرفة الخطوة التالية.">
 
-Tell us about your business and we will contact you.
+Tell us about your business and what you want to build. We’ll get back to you with the next step.
 
 </p>
 
-<form class="contact-form" id="contactForm">
+</div>
+
+
+<div class="contact-wrapper">
+
+
+<div class="contact-info">
+
+<h3
+data-en="BUILD YOUR DIGITAL PRESENCE"
+data-ar="ابنِ حضورك الرقمي">
+
+BUILD YOUR DIGITAL PRESENCE
+
+</h3>
+
+<p
+data-en="Whether you need a Smart Page or a complete business website, tell us about your project and we’ll help you turn the idea into a professional digital presence."
+data-ar="سواء كنت تحتاج إلى صفحة ذكية أو موقعًا كاملًا لمشروعك، أخبرنا عن مشروعك وسنساعدك في تحويل فكرتك إلى حضور رقمي احترافي.">
+
+Whether you need a Smart Page or a complete business website, tell us about your project and we’ll help you turn the idea into a professional digital presence.
+
+</p>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-bolt"></i>
+
+<span
+data-en="Professional digital presence"
+data-ar="حضور رقمي احترافي">
+
+Professional digital presence
+
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<span
+data-en="Designed for mobile and desktop"
+data-ar="مصمم للهاتف والكمبيوتر">
+
+Designed for mobile and desktop
+
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<span
+data-en="Direct WhatsApp communication"
+data-ar="تواصل مباشر عبر واتساب">
+
+Direct WhatsApp communication
+
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-qrcode"></i>
+
+<span
+data-en="Custom QR Code"
+data-ar="رمز QR مخصص">
+
+Custom QR Code
+
+</span>
+
+</div>
+
+</div>
+
+
+<form
+class="contact-form"
+id="contactForm">
+
+<h3
+class="form-title"
+data-en="TELL US ABOUT YOUR PROJECT"
+data-ar="أخبرنا عن مشروعك">
+
+TELL US ABOUT YOUR PROJECT
+
+</h3>
+
 
 <input
 type="text"
 id="clientName"
+name="name"
 placeholder="Your Name"
 data-placeholder-en="Your Name"
 data-placeholder-ar="الاسم"
 required>
 
+
 <input
 type="text"
 id="businessName"
+name="business"
 placeholder="Business Name"
 data-placeholder-en="Business Name"
 data-placeholder-ar="اسم المشروع"
 required>
 
+
 <input
 type="tel"
 id="phoneNumber"
+name="phone"
 placeholder="Phone Number"
 data-placeholder-en="Phone Number"
 data-placeholder-ar="رقم الهاتف"
 required>
 
-<select id="businessType">
 
-<option value=""
+<select
+id="businessType"
+name="project"
+required>
+
+<option
+value=""
 data-en="Select Business Type"
 data-ar="اختر نوع المشروع">
 
@@ -1919,7 +1752,8 @@ Select Business Type
 
 </option>
 
-<option value="Restaurant"
+<option
+value="Restaurant"
 data-en="Restaurant"
 data-ar="مطعم">
 
@@ -1927,7 +1761,8 @@ Restaurant
 
 </option>
 
-<option value="Clinic"
+<option
+value="Clinic"
 data-en="Clinic"
 data-ar="عيادة">
 
@@ -1935,7 +1770,8 @@ Clinic
 
 </option>
 
-<option value="Beauty Salon"
+<option
+value="Beauty Salon"
 data-en="Beauty Salon"
 data-ar="صالون تجميل">
 
@@ -1943,7 +1779,8 @@ Beauty Salon
 
 </option>
 
-<option value="Store"
+<option
+value="Store"
 data-en="Store"
 data-ar="متجر">
 
@@ -1951,7 +1788,17 @@ Store
 
 </option>
 
-<option value="Other"
+<option
+value="Office"
+data-en="Office"
+data-ar="مكتب">
+
+Office
+
+</option>
+
+<option
+value="Other"
 data-en="Other"
 data-ar="أخرى">
 
@@ -1961,213 +1808,389 @@ Other
 
 </select>
 
+
 <textarea
 id="clientMessage"
+name="message"
 placeholder="Tell us about your business"
 data-placeholder-en="Tell us about your business"
-data-placeholder-ar="أخبرنا عن مشروعك"></textarea>
+data-placeholder-ar="أخبرنا عن مشروعك واحتياجاتك"></textarea>
 
-<button type="submit" class="btn"
+
+<button
+type="submit"
+class="btn submit-btn"
+id="submitBtn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+<span
 data-en="SEND REQUEST"
 data-ar="إرسال الطلب">
 
 SEND REQUEST
 
+</span>
+
 </button>
+
+
+<div
+class="form-status"
+id="formStatus">
+</div>
 
 </form>
 
+</div>
+
 </section>
 
-
-<!-- =========================================
-FOOTER
-========================================= -->
 
 <footer>
 
 <h2>ATHAR</h2>
 
 <p
-data-en="EVERYTHING YOUR CUSTOMERS NEED. ONE SMART LINK."
-data-ar="كل ما يحتاجه عملاؤك في رابط ذكي واحد.">
+data-en="Your business deserves to leave a mark. We build professional digital experiences for modern businesses."
+data-ar="مشروعك يستحق أن يترك أثرًا. نحن نبني تجارب رقمية احترافية للمشروعات الحديثة.">
 
-EVERYTHING YOUR CUSTOMERS NEED. ONE SMART LINK.
+Your business deserves to leave a mark. We build professional digital experiences for modern businesses.
 
 </p>
 
-<br>
+<p style="margin-top:18px;">
 
-<p>© 2026 ATHAR. All Rights Reserved.</p>
+© <span id="year"></span> ATHAR
+
+</p>
 
 </footer>
 
 
-<!-- FLOATING WHATSAPP -->
-
 <a
 href="https://wa.me/201289122717"
+target="_blank"
+rel="noopener"
 class="whatsapp"
-target="_blank">
+aria-label="WhatsApp">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
 
-<!-- BACK TO TOP -->
-
-<a href="#" class="top">
+<button
+type="button"
+class="top-btn"
+id="topBtn"
+aria-label="Back to top">
 
 <i class="fa-solid fa-arrow-up"></i>
 
-</a>
+</button>
 
-
-<!-- =========================================
-JAVASCRIPT
-========================================= -->
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+/* =========================
+LANGUAGE
+========================= */
 
-    const languageButton = document.getElementById("languageBtn");
+let currentLanguage = "en";
 
-    let currentLanguage = "en";
+const languageBtn =
+document.getElementById("languageBtn");
 
+function setLanguage(language){
 
-    languageButton.addEventListener("click", function () {
+currentLanguage = language;
 
-        if (currentLanguage === "en") {
+const elements =
+document.querySelectorAll("[data-en][data-ar]");
 
-            currentLanguage = "ar";
+elements.forEach(function(element){
 
-            document.documentElement.lang = "ar";
-            document.documentElement.dir = "rtl";
-
-            document.body.classList.add("rtl");
-
-            languageButton.textContent = "English";
-
-        } else {
-
-            currentLanguage = "en";
-
-            document.documentElement.lang = "en";
-            document.documentElement.dir = "ltr";
-
-            document.body.classList.remove("rtl");
-
-            languageButton.textContent = "عربي";
-
-        }
-
-
-        const elements = document.querySelectorAll("[data-en][data-ar]");
-
-        elements.forEach(function(element) {
-
-            if (currentLanguage === "ar") {
-
-                element.innerHTML = element.getAttribute("data-ar");
-
-            } else {
-
-                element.innerHTML = element.getAttribute("data-en");
-
-            }
-
-        });
-
-
-        const placeholders = document.querySelectorAll(
-            "[data-placeholder-en][data-placeholder-ar]"
-        );
-
-        placeholders.forEach(function(element) {
-
-            if (currentLanguage === "ar") {
-
-                element.placeholder =
-                element.getAttribute("data-placeholder-ar");
-
-            } else {
-
-                element.placeholder =
-                element.getAttribute("data-placeholder-en");
-
-            }
-
-        });
-
-    });
-
-
-    /* CONTACT FORM */
-
-    const contactForm =
-    document.getElementById("contactForm");
-
-
-    contactForm.addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-
-        const name =
-        document.getElementById("clientName").value;
-
-
-        const business =
-        document.getElementById("businessName").value;
-
-
-        const phone =
-        document.getElementById("phoneNumber").value;
-
-
-        const type =
-        document.getElementById("businessType").value;
-
-
-        const message =
-        document.getElementById("clientMessage").value;
-
-
-        const whatsappMessage =
-
-        "Hello ATHAR 👋\n\n" +
-
-        "Smart Page Request\n\n" +
-
-        "Name: " + name + "\n" +
-
-        "Business: " + business + "\n" +
-
-        "Phone: " + phone + "\n" +
-
-        "Business Type: " + type + "\n" +
-
-        "Message: " + message;
-
-
-        window.open(
-
-        "https://wa.me/201289122717?text=" +
-
-        encodeURIComponent(whatsappMessage),
-
-        "_blank"
-
-        );
-
-    });
+element.innerHTML =
+language === "ar"
+? element.getAttribute("data-ar")
+: element.getAttribute("data-en");
 
 });
+
+
+const inputs =
+document.querySelectorAll(
+"[data-placeholder-en][data-placeholder-ar]"
+);
+
+inputs.forEach(function(input){
+
+input.placeholder =
+language === "ar"
+? input.getAttribute("data-placeholder-ar")
+: input.getAttribute("data-placeholder-en");
+
+});
+
+
+document.body.classList.toggle(
+"rtl",
+language === "ar"
+);
+
+document.documentElement.lang =
+language === "ar" ? "ar" : "en";
+
+document.documentElement.dir =
+language === "ar" ? "rtl" : "ltr";
+
+
+languageBtn.textContent =
+language === "ar" ? "EN" : "عربي";
+
+}
+
+
+languageBtn.addEventListener(
+"click",
+function(){
+
+setLanguage(
+currentLanguage === "en"
+? "ar"
+: "en"
+);
+
+});
+
+
+/* =========================
+CONTACT FORM
+========================= */
+
+const contactForm =
+document.getElementById("contactForm");
+
+const formStatus =
+document.getElementById("formStatus");
+
+const submitBtn =
+document.getElementById("submitBtn");
+
+
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbxgyF53IN6KYrntvj0FguYj60dJDG9g80uSb0DSTLMQ6h2YsIWb6F0m6XD7T6qFWCch/exec";
+
+
+contactForm.addEventListener(
+"submit",
+async function(event){
+
+event.preventDefault();
+
+
+const name =
+document.getElementById("clientName").value.trim();
+
+const business =
+document.getElementById("businessName").value.trim();
+
+const phone =
+document.getElementById("phoneNumber").value.trim();
+
+const type =
+document.getElementById("businessType").value;
+
+const message =
+document.getElementById("clientMessage").value.trim();
+
+
+if(!name || !business || !phone || !type){
+
+formStatus.textContent =
+currentLanguage === "ar"
+? "من فضلك أكمل البيانات المطلوبة."
+: "Please complete the required fields.";
+
+return;
+
+}
+
+
+/* Open WhatsApp immediately
+to avoid popup blocking */
+
+const whatsappMessage =
+currentLanguage === "ar"
+
+?
+
+"مرحبًا ATHAR 👋\n\n" +
+"طلب صفحة رقمية جديدة\n\n" +
+"الاسم: " + name + "\n" +
+"المشروع: " + business + "\n" +
+"الهاتف: " + phone + "\n" +
+"نوع المشروع: " + type + "\n" +
+"الرسالة: " + message
+
+:
+
+"Hello ATHAR 👋\n\n" +
+"New Digital Page Request\n\n" +
+"Name: " + name + "\n" +
+"Business: " + business + "\n" +
+"Phone: " + phone + "\n" +
+"Business Type: " + type + "\n" +
+"Message: " + message;
+
+
+const whatsappURL =
+"https://wa.me/201289122717?text=" +
+encodeURIComponent(whatsappMessage);
+
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+
+/* Disable button */
+
+submitBtn.disabled = true;
+
+submitBtn.style.opacity = "0.6";
+
+formStatus.textContent =
+currentLanguage === "ar"
+? "جارٍ إرسال طلبك..."
+: "Sending your request...";
+
+
+/* Send to Google Sheets */
+
+const formData =
+new URLSearchParams();
+
+formData.append(
+"name",
+name
+);
+
+formData.append(
+"business",
+business
+);
+
+formData.append(
+"phone",
+phone
+);
+
+formData.append(
+"project",
+type
+);
+
+formData.append(
+"message",
+message
+);
+
+formData.append(
+"source",
+"ATHAR"
+);
+
+formData.append(
+"language",
+currentLanguage
+);
+
+
+try{
+
+await fetch(
+SCRIPT_URL,
+{
+method:"POST",
+body:formData,
+mode:"no-cors"
+}
+);
+
+
+/* Success */
+
+formStatus.textContent =
+currentLanguage === "ar"
+? "تم إرسال طلبك بنجاح. سنتواصل معك قريبًا."
+: "Your request was sent successfully. We’ll contact you soon.";
+
+contactForm.reset();
+
+
+}catch(error){
+
+console.error(
+"ATHAR FORM ERROR:",
+error
+);
+
+formStatus.textContent =
+currentLanguage === "ar"
+? "تم فتح واتساب. تعذر تأكيد حفظ الطلب في النظام."
+: "WhatsApp was opened. We could not confirm the system submission.";
+
+}
+
+
+/* Enable button */
+
+submitBtn.disabled = false;
+
+submitBtn.style.opacity = "1";
+
+});
+
+
+/* =========================
+BACK TO TOP
+========================= */
+
+const topBtn =
+document.getElementById("topBtn");
+
+topBtn.addEventListener(
+"click",
+function(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+
+/* =========================
+YEAR
+========================= */
+
+document.getElementById(
+"year"
+).textContent =
+new Date().getFullYear();
+
+
+/* =========================
+START IN ENGLISH
+========================= */
+
+setLanguage("en");
 
 </script>
 
 </body>
-
 </html>
