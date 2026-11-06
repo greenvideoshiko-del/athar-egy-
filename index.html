@@ -906,6 +906,8 @@ footer p{color:#B8C4D9}
 #features .grid .card:nth-last-child(2){grid-column:2 / span 2}
 #features .grid .card:last-child{grid-column:4 / span 2}
 }
+
+.work-video{display:block;width:100%;max-width:260px;aspect-ratio:9/16;margin:0 auto 18px;border-radius:18px;background:#061A3A;object-fit:cover;border:2px solid var(--gold);box-shadow:0 12px 32px rgba(11,42,87,.2)}
 </style>
 </head>
 
@@ -1263,6 +1265,38 @@ VIEW LIVE DEMO
 </span>
 
 </a>
+
+</div>
+
+
+<div class="card work-card video-card">
+
+<video
+class="work-video"
+controls
+playsinline
+preload="metadata">
+<source
+src="work-video-1.mp4"
+type="video/mp4"
+onerror="this.closest('.video-card').style.display='none'">
+</video>
+
+<h3
+data-en="FEATURED VIDEO"
+data-ar="فيديو مميز">
+
+FEATURED VIDEO
+
+</h3>
+
+<p
+data-en="A sample of our video work."
+data-ar="نموذج من أعمالنا في الفيديو.">
+
+A sample of our video work.
+
+</p>
 
 </div>
 
